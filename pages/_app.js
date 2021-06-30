@@ -1,7 +1,7 @@
 import '../styles/globals.sass'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Button, Drawer } from '@material-ui/core'
+import logo from '../public/img/birkabo_logo.svg'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,15 +13,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <header>
-        {/* <Image>Birkabo logga</Image> */}
-        <Drawer anchor={'right'} open={false}>
-          <h3>Test</h3>
-          <h3>Test</h3>
-          <h3>Test</h3>
-          <h3>Test</h3>
-          <h3>Test</h3>
-          <h3>Test</h3>
-        </Drawer>
+        <Image src={logo} width="150px" height="75px"/>
+        <h3>Meny</h3>
       </header>
 
       <main>

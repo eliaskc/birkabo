@@ -1,19 +1,42 @@
 @import 'colors'
+@import 'fontSizes'
+@import '../css/bootstrap.css'
 
 html,
 body
     padding: 0
     margin: 0
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
-    background: $primary-color
-
+    background-color: $primary-color
+    
 header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
     height: 6rem
-    background: $secondary-color
+    padding: 10px
+    background-color: $primary-color
 
 main
-    height: calc(100vh - 6rem)
+    min-height: calc(100vh - 6rem)
 
 footer
-    height: 12rem
-    background: $accent-color
+    height: 18rem
+    background-color: $accent-color
+
+h1
+    font-size: $heading1
+
+h2
+    font-size: $heading2
+
+h3
+    font-size: $heading3
+
+.btn-startScreenButton
+    background-color: $secondary-color
+    height: 7rem
+    width: 100%
+    font-size: $heading3
+    font-weight: 500
