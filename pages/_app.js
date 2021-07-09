@@ -1,7 +1,7 @@
 import '../styles/globals.sass'
 import Head from 'next/head'
 import Image from 'next/image'
-import logo from '../public/img/birkabo_logo.svg'
+import logo from '../public/birkabo_logo.svg'
 
 function MyApp({ Component, pageProps }) {
   return (
