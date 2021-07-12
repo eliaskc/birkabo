@@ -1,6 +1,7 @@
 import '../styles/globals.sass'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/Link'
 import logo from '../public/birkabo_logo.svg'
 
 function MyApp({ Component, pageProps }) {
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <header>
-        <Image src={logo} width="150px" height="75px"/>
+        <Link href="/">
+          <Image src={logo} width="150px" height="75px" />
+        </Link>
         <h3>Meny</h3>
       </header>
 

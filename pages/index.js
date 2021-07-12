@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.sass'
-import Image from 'next/image'
+import Image from 'next/Image'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
 
