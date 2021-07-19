@@ -1,6 +1,6 @@
 import '../styles/globals.sass'
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from 'next/Image'
 import Link from 'next/Link'
 import logo from '../public/birkabo_logo.svg'
 

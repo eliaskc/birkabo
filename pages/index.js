@@ -22,16 +22,16 @@ export default function Home() {
 
       <div className={styles.buttonContainer}>
         <Link href="/fastigheter">
-          <Button variant="startScreenButton">Våra fastigheter</Button>
+          <Button variant="homeScreenButton">Våra fastigheter</Button>
         </Link>
         <Link href="/info">
-          <Button variant="startScreenButton">Hyregästinformation</Button>
+          <Button variant="homeScreenButton">Hyregästinformation</Button>
         </Link>
         <Link href="/kontakt">
-          <Button variant="startScreenButton">Kontakta Oss</Button>
+          <Button variant="homeScreenButton">Kontakta oss</Button>
         </Link>
         <Link href="/om">
-          <Button variant="startScreenButton">Om Birkabo</Button>
+          <Button variant="homeScreenButton">Om Birkabo</Button>
         </Link>
       </div>
     </div>
