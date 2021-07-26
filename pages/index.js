@@ -1,4 +1,4 @@
-import styles from '../styles/modules/Home.module.sass'
+import styles from '../styles/modules/Hem.module.sass'
 import Image from 'next/Image'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9001.jpg'
 import welcomeImgMobile from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
 
-export default function Home() {
+export default function Hem() {
 
   return (
     <div className={styles.container}>

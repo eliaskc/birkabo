@@ -1,9 +1,9 @@
-import styles from "../styles/modules/Estates.module.sass"
+import styles from "../styles/modules/Fastigheter.module.sass"
 import CardGroup from 'react-bootstrap/CardGroup'
 // import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import EstateCard from "../components/estateCard"
+import EstateCard from "../components/fastighetCard"
 
-export default function Estates() {
+export default function Fastigheter() {
     return (
         <div class={styles.container}>
             {/* <Breadcrumb>

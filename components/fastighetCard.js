@@ -2,9 +2,9 @@ import { Card } from 'react-bootstrap'
 import Link from 'next/Link'
 import Image from 'next/Image'
 
-import styles from "../styles/modules/EstateCard.module.sass"
+import styles from "../styles/modules/FastighetCard.module.sass"
 
-export default function EstateCard(props) {
+export default function FastighetCard(props) {
     var imgSrc = "/../public/img/previews/" + props.estateShort + ".jpg"
 
     return (

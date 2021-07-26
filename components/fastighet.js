@@ -1,10 +1,11 @@
-import styles from "../styles/modules/Estate.module.sass"
+import styles from "../styles/modules/Fastighet.module.sass"
 import Image from "next/Image"
 import Carousel from "react-bootstrap/Carousel"
 // import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
-export default function Estate(props) {
+export default function Fastighet(props) {
     var imgSrc = "/../public/img/previews/" + props.estateShort + ".jpg"
+
 
     return (
         <div className={styles.container}>
@@ -35,7 +36,7 @@ export default function Estate(props) {
 
             </Carousel>
 
-            <iframe src={props.mapUrl} width="300" height="200" style={{border: 0}} allowfullscreen="" loading="lazy"></iframe>
+            <iframe className={styles.embedMap} src={props.mapUrl} width="300" height="200" style={{border: 0}} allowfullscreen="" loading="lazy"></iframe>
         </div>
     )
 }

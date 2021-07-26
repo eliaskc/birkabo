@@ -11,13 +11,18 @@ function MyApp({ Component, pageProps }) {
         <title>Birkabo Förvaltning</title>
         <meta name="description" content="Hemsida för Birkabo Förvaltning" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </Head>
 
       <header>
         <Link href="/">
           <Image src={logo} width="150px" height="75px" />
         </Link>
-        <h3>Meny</h3>
+        <span class="material-icons md-36">menu</span>
+        {/* <div className="menuButton">
+          <h4 style={{margin: "0 1rem 0 0"}}>Meny</h4>
+          <span class="material-icons md-36">menu</span>
+        </div> */}
       </header>
 
       <main>
@@ -27,7 +32,7 @@ function MyApp({ Component, pageProps }) {
       <footer>
 
       </footer>
-    </div>
+    </div >
   )
 }
 
