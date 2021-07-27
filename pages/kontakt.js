@@ -9,7 +9,7 @@ export default function Kontakt() {
             </div>
             <div>
                 <h3>Kontaktuppgifter</h3>
-                <p>För övriga frågor kan ni kontakta oss direkt via telefon eller mejl.</p>
+                <p>För övriga frågor eller funderingar kan ni kontakta oss direkt via telefon eller mejl.</p>
                 <p><b>Telefon:</b> <a href="tel:+46712456789">0712-456 789</a></p>
                 <p><b>Epost:</b> <a href="mailto:info@birkabo.se">info@birkabo.se</a></p>
 
