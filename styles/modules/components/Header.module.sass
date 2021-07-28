@@ -1,0 +1,40 @@
+@import '../../colors'
+@import '../../fontSizes'
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    height: 6rem
+    padding: 1rem
+    background-color: $primary-color
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+
+    .logo
+        cursor: pointer
+
+    .menu#visible
+        position: absolute
+        z-index: 10
+        left: 0
+        right: 0
+        top: 6rem
+        margin: 0
+        padding: 0
+
+        background-color: $accent-color
+        color: white
+        box-shadow: 0 5px 20px -5px rgba(17, 75, 95, 0.3)
+
+        h4
+            margin: 0
+            padding: 1.8rem 1rem
+            width: 100%
+            cursor: pointer
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+
+    .menu#hidden
+        height: 0
+        display: none
