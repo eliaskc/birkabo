@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/Link'
+import Link from 'next/link'
 import logo from '../public/birkabo_logo.svg'
 import { useState } from 'react'
 import styles from '../styles/modules/components/Header.module.sass'
