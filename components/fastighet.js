@@ -1,5 +1,5 @@
 import styles from "../styles/modules/components/Fastighet.module.sass"
-import Image from "next/Image"
+import Image from "next/image"
 import Carousel from "react-bootstrap/Carousel"
 // import Breadcrumb from 'react-bootstrap/Breadcrumb'
 

@@ -1,4 +1,4 @@
-import Image from 'next/Image'
+import Image from 'next/image'
 import Link from 'next/Link'
 import logo from '../public/birkabo_logo.svg'
 import { useState } from 'react'
