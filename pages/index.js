@@ -1,6 +1,6 @@
 import styles from '../styles/modules/Hem.module.sass'
 import Image from 'next/Image'
-import Link from 'next/link'
+import Link from 'next/Link'
 import Button from 'react-bootstrap/Button'
 
 import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9001.jpg'
