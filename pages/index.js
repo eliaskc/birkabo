@@ -10,7 +10,9 @@ export default function Hem() {
 
   return (
     <div className={styles.container}>
-      <Image src={welcomeImgMobile} alt="Bild av uteplats på Birkagatan 55" width={1200} height={800}></Image>
+      <div className={styles.welcomeImg}>
+        <Image src={welcomeImgMobile} alt="Bild av uteplats på Birkagatan 55" /* width={1200} height={600} */ layout="fill" objectFit="cover"></Image>
+      </div>
 
       <div className={styles.textContainer}>
         <h3>Välkommen till</h3>

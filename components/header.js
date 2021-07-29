@@ -21,16 +21,16 @@ export default function Header() {
 
             <menu className={styles.menu} id={show ? styles.visible : styles.hidden}>
                 <Link href="/fastigheter">
-                    <h4 onClick={handleClose}>Våra fastigheter</h4>
+                    <h3 onClick={handleClose}>Våra fastigheter</h3>
                 </Link>
                 <Link href="/info">
-                    <h4 onClick={handleClose}>Hyresgästinformation</h4>
+                    <h3 onClick={handleClose}>Hyresgästinformation</h3>
                 </Link>
                 <Link href="/kontakt">
-                    <h4 onClick={handleClose}>Kontakta oss</h4>
+                    <h3 onClick={handleClose}>Kontakta oss</h3>
                 </Link>
                 <Link href="/om">
-                    <h4 onClick={handleClose} style={{ border: "none" }}>Om Birkabo</h4>
+                    <h3 onClick={handleClose} style={{ border: "none" }}>Om Birkabo</h3>
                 </Link>
             </menu>
         </header >
