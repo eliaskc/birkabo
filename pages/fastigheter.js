@@ -5,7 +5,7 @@ import EstateCard from "../components/fastighetCard"
 
 export default function Fastigheter() {
     return (
-        <div class={styles.container}>
+        <div className={styles.container}>
             {/* <Breadcrumb>
                 <Breadcrumb.Item href="/">Hem</Breadcrumb.Item>
                 <Breadcrumb.Item active>Våra Fastigheter</Breadcrumb.Item>
