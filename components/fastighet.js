@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel"
 // import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 export default function Fastighet(props) {
-    var imgSrc = "/../public/img/previews/" + props.estateShort + ".jpg"
+    var imgSrc = "/public/img/previews/" + props.estateShort + ".jpg"
 
 
     return (

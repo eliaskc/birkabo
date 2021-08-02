@@ -5,7 +5,7 @@ import Image from 'next/image'
 import styles from "../styles/modules/components/FastighetCard.module.sass"
 
 export default function FastighetCard(props) {
-    var imgSrc = "/../public/img/previews/" + props.estateShort + ".jpg"
+    var imgSrc = "/public/img/previews/" + props.estateShort + ".jpg"
 
     return (
         <Link href={"fastigheter/" + props.estateShort}>
