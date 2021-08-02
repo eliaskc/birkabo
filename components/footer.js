@@ -28,7 +28,7 @@ export default function Footer() {
                 <p><a href="mailto:info@birkabo.se">info@birkabo.se</a></p>
 
                 <span>Birkagatan 55A</span>
-                <p>415 56 Göteborg</p>
+                <p>416 56 Göteborg</p>
             </div>
 
             <div className={styles.mapContainer}>
