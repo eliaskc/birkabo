@@ -1,6 +1,5 @@
 import styles from "../styles/modules/Fastigheter.module.sass"
 import CardGroup from 'react-bootstrap/CardGroup'
-// import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import EstateCard from "../components/fastighetCard"
 
 export default function Fastigheter() {

@@ -44,6 +44,7 @@ h4
 
     background-color: $secondary-color
     box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.2)
+    transition: all 0.1s
 
 .btn-homeScreenButton:hover
     background-color: #e9dab9
@@ -51,9 +52,16 @@ h4
 /* Rules for sizing google font icons */
 .material-icons.md-18
     font-size: 18px
+
 .material-icons.md-24
     font-size: 24px
+
 .material-icons.md-36
     font-size: 36px
+
 .material-icons.md-48
     font-size: 48px
+
+@media screen and (min-width: 900px)
+    .hamburger-react
+        display: none

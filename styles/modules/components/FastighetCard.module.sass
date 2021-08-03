@@ -3,11 +3,10 @@
 
 .card
     cursor: pointer
-    // margin: 0 !important
-    // border: none
+    border: none
 
     .cardTitle
-        font-size: $heading3
+        font-size: $heading4
 
     .cardOverlay
         display: flex
@@ -20,3 +19,8 @@
 
     .cardOverlay:hover
         background-color: rgba(0, 0, 0, 0.1)
+
+@media screen and (min-width: 900px)
+    .card
+        .cardTitle
+            font-size: $heading2

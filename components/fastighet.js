@@ -35,7 +35,7 @@ export default function Fastighet(props) {
 
             </Carousel>
 
-            <iframe className={styles.embedMap} src={props.mapUrl} width="300" height="200" style={{border: 0}} allowfullscreen="" loading="lazy"></iframe>
+            <iframe className={styles.embedMap} src={props.mapUrl} width="300" height="200" style={{border: 0}} allowFullScreen="" loading="lazy"></iframe>
         </div>
     )
 }

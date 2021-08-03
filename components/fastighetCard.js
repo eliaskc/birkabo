@@ -10,7 +10,7 @@ export default function FastighetCard(props) {
     return (
         <Link href={"fastigheter/" + props.estateShort}>
             <Card className={styles.card}>
-                <Image src={imgSrc} width={1200} height={800}></Image>
+                <Image src={imgSrc} /* width={1200} height={800} */ layout="fill" objectFit="cover"></Image>
 
                 <Card.ImgOverlay className={styles.cardOverlay}>
                     <Card.Title className={styles.cardTitle}>{props.estateName}</Card.Title>

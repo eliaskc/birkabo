@@ -17,8 +17,8 @@ export default function Header() {
                 <Image onClick={handleClose} className={styles.logo} src={logo} width="150px" height="75px" />
             </Link>
             {/* <span class="material-icons md-36" onClick={toggleShow} style={{ cursor: "pointer" }}>menu</span> */}
-            <Hamburger toggled={show} onToggle={toggleShow}></Hamburger>
 
+            <Hamburger toggled={show} onToggle={toggleShow}></Hamburger>
             <menu className={styles.menu} id={show ? styles.visible : styles.hidden}>
                 <Link href="/fastigheter">
                     <h3 onClick={handleClose}>Våra fastigheter</h3>

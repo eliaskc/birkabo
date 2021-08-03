@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
 
             <div className={styles.mapContainer}>
-                <iframe className={styles.embedMap} src={mapUrl} width="300" height="200" style={{ border: 0 }} allowfullscreen="" loading="lazy"></iframe>
+                <iframe className={styles.embedMap} src={mapUrl} width="300" height="200" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
             </div>
         </footer>
     )

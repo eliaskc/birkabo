@@ -38,3 +38,26 @@
     .menu#hidden
         height: 0
         display: none
+
+@media screen and (min-width: 900px)
+    .header
+        .menu
+            display: flex
+            flex-direction: row
+            h3
+                margin: 0
+                padding: 0 1rem
+                cursor: pointer
+                transition: all 0.1s
+                font-weight: 400
+                font-size: $heading4
+
+            h3:hover
+                color: white
+
+        .menu#hidden
+            height: auto
+            display: flex
+
+        .menuButton
+            display: none
