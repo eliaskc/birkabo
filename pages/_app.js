@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width"/>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" />
       </Head>
 
       <Header></Header>
