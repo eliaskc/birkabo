@@ -16,9 +16,6 @@ export default function Fastighet(props) {
 
     return (
         <div className={styles.container}>
-
-
-
             <Carousel
                 showIndicators={true} showArrows={true} showStatus={false} dynamicHeight={true} thumbWidth="100px"
                 renderArrowPrev={(onClickHandler, hasPrev, label) =>
@@ -62,8 +59,6 @@ export default function Fastighet(props) {
             <p>{props.estateDescription}</p>
             <p><b>Byggnadsår: </b>{props.year}</p>
             <p><b>Område: </b>{props.area}</p>
-
-
 
             <iframe className={styles.embedMap} src={props.mapUrl} width="300" height="200" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
         </div>
