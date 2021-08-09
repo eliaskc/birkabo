@@ -1,11 +1,15 @@
 .container
     display: flex
     flex-direction: column
-    justify-content: center
     align-items: center
 
-    padding: 4rem 2rem 2rem 2rem
+    padding: 2rem
 
     div
         text-align: justify
         width: 100%
+
+@media screen and (min-width: 900px)
+    .container
+        padding: 4rem
+        width: 60ch

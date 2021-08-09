@@ -20,6 +20,9 @@ export default function Header() {
 
             <Hamburger toggled={show} onToggle={toggleShow}></Hamburger>
             <menu className={styles.menu} id={show ? styles.visible : styles.hidden}>
+                <Link href="/">
+                    <h3 onClick={handleClose}>Hem</h3>
+                </Link>
                 <Link href="/fastigheter">
                     <h3 onClick={handleClose}>Våra fastigheter</h3>
                 </Link>

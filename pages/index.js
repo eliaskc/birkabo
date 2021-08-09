@@ -15,8 +15,8 @@ export default function Hem() {
       </div>
 
       <div className={styles.textContainer}>
-        <h3>Välkommen till</h3>
-        <h1>Birkabo Förvaltning</h1>
+        <h1 class="large">Välkommen till</h1>
+        <h1 class="xxlarge">Birkabo Förvaltning</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo tempora libero et dolorum voluptatum
           ab eaque itaque animi dicta. </p>
       </div>

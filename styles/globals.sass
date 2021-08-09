@@ -32,6 +32,15 @@ h3
 h4
     font-size: $heading4
 
+h1.large
+    font-size: $heading1
+
+h1.xlarge
+    font-size: $heading1-large
+
+h1.xxlarge
+    font-size: $heading1-xlarge
+
 .btn-homeScreenButton
     width: 100%
     max-width: 24rem
@@ -62,12 +71,7 @@ h4
 .material-icons.md-48
     font-size: 48px
 
-.carousel
-    width: 600px !important
-
-    .thumbs
-        padding: 0
-    
+.carousel-root
     .material-icons
         font-size: 64px
         color: rgba(255, 255, 255, 0.8)
@@ -76,6 +80,44 @@ h4
         &:hover
             color: white
 
+    .carousel
+        .thumbs-wrapper
+            margin: 20px 0 0 0
+
+            .thumbs
+                padding: 0
+
+    .carousel.carousel-slider
+        border-radius: .25rem
+
+        img
+            border-radius: .25rem
+
 @media screen and (min-width: 900px)
     .hamburger-react
         display: none
+
+    .carousel
+        .thumbs
+            margin: 0
+
+            .thumb.selected
+                border-width: 3px
+                padding: 0
+
+            .thumb
+                padding: 3px
+                border-width: 0
+                transition: 0s
+
+    .carousel.carousel-slider
+        box-shadow: 0 5px 60px -10px rgba(0, 0, 0, 0.4)
+
+    h1.large
+        font-size: $heading1-large
+
+    h1.xlarge
+        font-size: $heading1-xlarge
+
+    h1.xxlarge
+        font-size: $heading1-xxlarge

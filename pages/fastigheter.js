@@ -1,19 +1,15 @@
 import styles from "../styles/modules/Fastigheter.module.sass"
 import CardGroup from 'react-bootstrap/CardGroup'
-import EstateCard from "../components/fastighetCard"
+import FastighetCard from "../components/fastighetCard"
 
 export default function Fastigheter() {
     return (
         <div className={styles.container}>
-            {/* <Breadcrumb>
-                <Breadcrumb.Item href="/">Hem</Breadcrumb.Item>
-                <Breadcrumb.Item active>Våra Fastigheter</Breadcrumb.Item>
-            </Breadcrumb> */}
-            <CardGroup>
-                <EstateCard estateShort="VR" estateName="Viktor Rydbergsgatan 30"></EstateCard>
-                <EstateCard estateShort="B51" estateName="Birkagatan 51"></EstateCard>
-                <EstateCard estateShort="B55" estateName="Birkagatan 55"></EstateCard>
-            </CardGroup>
+            <div className={styles.cardGroup}>
+                <FastighetCard estateShort="VR" estateName="Viktor Rydbergsgatan 30"></FastighetCard>
+                <FastighetCard estateShort="B51" estateName="Birkagatan 51"></FastighetCard>
+                <FastighetCard estateShort="B55" estateName="Birkagatan 55"></FastighetCard>
+            </div>
         </div>
     )
 }
