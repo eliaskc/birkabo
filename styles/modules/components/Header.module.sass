@@ -39,18 +39,19 @@
         height: 0
         display: none
 
-@media screen and (min-width: 900px)
+@media screen and (min-width: 960px)
     .header
         .menu
             display: flex
             flex-direction: row
             h3
+                color: $accent-color 
                 margin: 0
                 padding: 0 1rem
                 cursor: pointer
                 transition: all 0.1s
                 font-weight: 400
-                font-size: $heading4
+                font-size: $heading5
 
             h3:hover
                 color: white
@@ -61,3 +62,9 @@
 
         .menuButton
             display: none
+
+@media screen and (min-width: 1030px)
+    .header
+        .menu
+            h3
+                font-size: $heading4

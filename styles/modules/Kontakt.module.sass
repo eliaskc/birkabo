@@ -1,10 +1,24 @@
-.container
-    padding: 2rem
+.textContainer
+    display: flex
+    flex-direction: column
+    padding: 2rem 1rem 8rem 1rem
+    min-height: 70vh
 
     div
         width: 100%
 
-@media screen and (min-width: 900px)
-    .container
-        padding: 4rem
-        width: 60ch
+.headerImg
+    width: 100vw
+    height: 40vh
+    position: relative
+
+@media screen and (min-width: 960px)
+    .textContainer
+        padding: 2rem 4rem 12rem 4rem
+        flex-direction: row
+        width: 100%
+        div
+            max-width: 60ch
+
+    .headerImg
+        height: 50vh

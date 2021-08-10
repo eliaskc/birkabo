@@ -20,14 +20,14 @@ export default function Fastighet(props) {
                 showIndicators={true} showArrows={true} showStatus={false} dynamicHeight={true} thumbWidth="100px"
                 renderArrowPrev={(onClickHandler, hasPrev, label) =>
                     hasPrev && (
-                        <span class="material-icons" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 0 }}>
+                        <span className="material-icons" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 0 }}>
                             navigate_before
                         </span>
                     )
                 }
                 renderArrowNext={(onClickHandler, hasNext, label) =>
                     hasNext && (
-                        <span class="material-icons large" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 0 }}>
+                        <span className="material-icons large" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 0 }}>
                             navigate_next
                         </span>
                     )

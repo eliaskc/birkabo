@@ -1,15 +1,24 @@
-.container
+.textContainer
     display: flex
     flex-direction: column
     align-items: center
 
-    padding: 2rem
+    padding: 2rem 1rem 8rem 1rem
+    min-height: 70vh
 
     div
         text-align: justify
         width: 100%
 
-@media screen and (min-width: 900px)
-    .container
-        padding: 4rem
+.headerImg
+    width: 100vw
+    height: 40vh
+    position: relative
+
+@media screen and (min-width: 960px)
+    .textContainer
+        padding: 2rem 4rem 12rem 4rem
         width: 60ch
+
+    .headerImg
+        height: 50vh
