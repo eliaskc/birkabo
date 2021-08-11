@@ -3,9 +3,8 @@ import Image from "next/image"
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-
 export default function Fastighet(props) {
-    var imgSrc = "/img/previews/" + props.estateShort + ".jpg"
+    var galleryPath = "/img/" + props.estateShort + "_gallery"
 
     const arrowStyles = {
         position: 'absolute',
@@ -13,6 +12,20 @@ export default function Fastighet(props) {
         top: 'calc(50% - 18px)',
         cursor: 'pointer',
     };
+
+    function createImages() {
+        let images = []
+        for (let i = 1; i < 6; i++) {
+            images.push(
+                <div style={{height: "500px", position: "relative"}}>
+                    {/* <Image src={galleryPath + "/" + i + ".jpg"} layout="fill" objectFit="scale-down"></Image> */}
+                    <img src={galleryPath + "/" + i + ".jpg"} style={{height: "100%", "object-fit": "cover"}} />
+                </div>
+            )
+        }
+        return images
+    }
+
 
     return (
         <div className={styles.container}>
@@ -33,7 +46,9 @@ export default function Fastighet(props) {
                     )
                 }>
 
-                <div>
+                {createImages()}
+
+                {/* <div>
                     <Image src={imgSrc} width={1200} height={800}></Image>
                     <img alt="" src={imgSrc} />
                 </div>
@@ -52,7 +67,7 @@ export default function Fastighet(props) {
                 <div>
                     <Image src={imgSrc} width={1200} height={800}></Image>
                     <img alt="" src={imgSrc} />
-                </div>
+                </div> */}
             </Carousel>
 
             <div className={styles.textBox}>
