@@ -1,7 +1,7 @@
 import styles from "../styles/modules/Om.module.sass"
 import Image from 'next/image'
 
-import headerImg from "./../public/img/headers/info.jpg"
+import headerImg from "./../public/img/headers/historia.jpg"
 
 export default function Om() {
 

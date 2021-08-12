@@ -1,11 +1,22 @@
+@import '../colors'
+@import '../fontSizes'
+    
 .textContainer
     display: flex
     flex-direction: column
-    padding: 2rem 1rem 8rem 1rem
+    padding: 2rem 1rem 4rem 1rem
     min-height: 70vh
 
     div
         width: 100%
+    .jour
+        background-color: red
+        color: white
+        padding: 1rem
+        border-radius: 0.25rem
+        margin: 0 0 2rem 0
+        a
+            color: $primary-color
 
 .headerImg
     width: 100vw
@@ -14,11 +25,13 @@
 
 @media screen and (min-width: 960px)
     .textContainer
-        padding: 2rem 4rem 12rem 4rem
+        padding: 2rem 2rem 12rem 2rem
         flex-direction: row
         width: 100%
-        div
+        .textBox
             max-width: 60ch
+            text-align: justify
+            margin: 0 2rem
 
     .headerImg
         height: 50vh
