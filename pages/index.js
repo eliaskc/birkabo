@@ -27,7 +27,7 @@ export default function Hem() {
           <Button variant="homeScreenButton">Våra fastigheter</Button>
         </Link>
         <Link href="/info">
-          <Button variant="homeScreenButton">Hyregästinformation</Button>
+          <Button variant="homeScreenButton">Hyresgästinformation</Button>
         </Link>
         <Link href="/kontakt">
           <Button variant="homeScreenButton">Kontakta oss</Button>

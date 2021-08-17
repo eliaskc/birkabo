@@ -48,8 +48,11 @@ export default function Info() {
                             <Tab.Pane eventKey="#link2">
                                 <h1 className="xlarge">{title2}</h1>
                                 <p>Nedan hittar ni de blanketter ni använder er av vid bland annat ansökan av autogiro, lägenhetsbyte och andrahandsuthyrning.</p>
-                                <p>Ni kan antingen skriva ut och posta ifylld blankett till kontoret på Birkagatan 55A, med Birkabo Förvaltning som adressent.
-                                    Alternativt kan ni fylla i blanketten digitalt och skicka via mejl till <a href="mailto:info@birkabo.se">info@birkabo.se</a></p>
+                                <p>Ni kan antingen skriva ut och posta ifylld blankett till: </p>
+                                <p>Birkabo Förvaltning, <br />
+                                    Birkagatan 55A, <br />
+                                    416 56 Göteborg</p>
+                                <p>Alternativt kan ni fylla i blanketten digitalt och skicka via mejl till <a href="mailto:info@birkabo.se">info@birkabo.se</a></p>
 
                                 <h3 className={styles.formItem}>Autogiro <span className="material-icons md-36">save_alt</span></h3>
                                 <h3 className={styles.formItem}>Lägenhetsbyte <span className="material-icons md-36">save_alt</span></h3>
@@ -70,11 +73,11 @@ export default function Info() {
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                                 <div>
-                                    <h3>Erbjuder ni autogira?</h3>
+                                    <h3>Erbjuder ni autogiro?</h3>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                                 <div>
-                                    <h3>Erbjuder ni epostaviseringar?</h3>
+                                    <h3>Erbjuder ni epost-aviseringar?</h3>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </Tab.Pane>

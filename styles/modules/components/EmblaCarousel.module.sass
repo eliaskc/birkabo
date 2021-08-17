@@ -12,6 +12,9 @@
     width: 100%
     height: calc(300px + 2rem)
 
+    &.embla--thumb
+        height: auto
+
     &__viewport
         overflow: hidden
         width: 100%
@@ -23,6 +26,10 @@
         -khtml-user-select: none
         -webkit-tap-highlight-color: transparent
 
+        &.embla__container--thumb
+            cursor: default
+            height: 100px
+
     &__slide
         position: relative
 
@@ -30,24 +37,62 @@
             min-width: 100%
 
         &:nth-child(2)
-            min-width: 70%
+            min-width: 80%
 
         &:nth-child(3)
-            min-width: 70%
+            min-width: 80%
 
         &:nth-child(4)
             min-width: 100%
 
         &:nth-child(5)
-            min-width: 70%
+            min-width: 80%
+
+        &.embla__slide--thumb
+            min-width: 30% !important
+            margin: .5rem
 
         &__inner
             position: relative
             overflow: hidden
             height: 300px
             margin: 0 1rem
+
             &__img
                 box-shadow: 0 5px 60px -10px rgba(0, 0, 0, 0.4)
+
+            &.embla__slide__inner--thumb
+                touch-action: manipulation
+                cursor: pointer
+                border: 0
+                outline: 0
+                margin: 0
+                padding: 0
+                height: 100%
+                width: 100%
+                background-color: transparent
+                position: relative
+                display: block
+                overflow: hidden
+
+    &.embla--thumb
+        padding-top: 0
+
+.embla__slide__thumbnail
+    position: absolute
+    opacity: 0.5
+    top: 0
+    bottom: 0
+    left: -10000%
+    right: -10000%
+    margin: auto
+    min-width: 1000%
+    min-height: 1000%
+    max-width: none
+    transition: opacity 0.2s
+
+    .embla__slide--thumb.is-selected &
+        opacity: 1
 
 .embla__dots
     display: flex
@@ -61,6 +106,11 @@
         width: 900px
         height: calc(600px + 2rem)
 
+        &__container
+
+            &.embla__container--thumb
+                cursor: default
+                height: 150px
         &__slide
             position: relative
 
@@ -84,3 +134,8 @@
                 overflow: hidden
                 height: 600px
                 margin: 0 1rem
+
+            &.embla__slide--thumb
+                padding-left: 1rem
+                margin: 0
+                min-width: 25% !important

@@ -11,7 +11,7 @@ export default function Fastighet(props) {
             </div>
 
             <div className={styles.textBox}>
-                <h1>{props.estateName}</h1>
+                <h1 className="large">{props.estateName}</h1>
                 <p>{props.estateDescription}</p>
                 <p><b>Byggnadsår: </b>{props.year}</p>
                 <p><b>Område: </b>{props.area}</p>
