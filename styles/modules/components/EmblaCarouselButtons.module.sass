@@ -6,7 +6,7 @@
     -khtml-user-select: none
     -webkit-tap-highlight-color: transparent
     touch-action: manipulation
-    
+
     cursor: pointer
     background-color: transparent
     position: absolute
@@ -36,6 +36,12 @@
     margin-left: 7.5px
     display: flex
     align-items: center
+
+    &:active
+        outline: 0
+
+    &:focus
+        outline: 0
 
     &:after
         background-color: #efefef

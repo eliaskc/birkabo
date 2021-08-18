@@ -19,7 +19,7 @@ export const NextButton = ({ enabled, onClick }) => (
 
 export const DotButton = ({ selected, onClick }) => (
     <button
-        className={selected ? styles["embla__dot"] + " " + styles["is-selected"] : styles.embla__dot }
+        className={selected ? styles["embla__dot"] + " " + styles["is-selected"] : styles.embla__dot}
         type="button"
         onClick={onClick}
     />

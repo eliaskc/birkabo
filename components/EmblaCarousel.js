@@ -22,6 +22,9 @@ export default function EmblaCarousel(props) {
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+  const scrollTo = useCallback((index) => embla && embla.scrollTo(index), [
+    embla
+  ]);
 
   const onThumbClick = useCallback(
     (index) => {
@@ -32,9 +35,9 @@ export default function EmblaCarousel(props) {
   );
 
   const onSelect = useCallback(() => {
-    if (!embla || !emblaThumbs) return;
+    if (!embla) return;
     setSelectedIndex(embla.selectedScrollSnap());
-    emblaThumbs.scrollTo(embla.selectedScrollSnap());
+    // emblaThumbs.scrollTo(embla.selectedScrollSnap());
     setPrevBtnEnabled(embla.canScrollPrev());
     setNextBtnEnabled(embla.canScrollNext());
   }, [embla, setSelectedIndex]);
@@ -67,7 +70,17 @@ export default function EmblaCarousel(props) {
         <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
       </div>
 
-      <div className={styles["embla"] + " " + styles["embla--thumb"]}>
+      <div className={styles.embla__dots}>
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            selected={index === selectedIndex}
+            onClick={() => scrollTo(index)}
+          />
+        ))}
+      </div>
+
+      {/* <div className={styles["embla"] + " " + styles["embla--thumb"]}>
         <div className={styles["embla__viewport"] + " " + styles["embla__viewport--thumb"]} ref={thumbViewportRef}>
           <div className={styles["embla__container"] + " " + styles["embla__container--thumb"]}>
             {slides.map((index) => (
@@ -80,7 +93,7 @@ export default function EmblaCarousel(props) {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
