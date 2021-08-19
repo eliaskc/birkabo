@@ -14,8 +14,9 @@ export default function Kontakt() {
                 <div className={styles.textBox}>
                     <div className={styles.jour}>
                         <h1 className="xlarge">Journummer</h1>
-                        <p>Vid akut vattenläcka ring Göteborgs El-, & Rörjour på:  <a href="tel:+4631403440">031 - 40 35 40</a></p>
+                        <p>Vid akut vattenläcka när AK Fastighetsskötsel (se nedan) ej kan nås, ring Göteborgs El-, & Rörjour på:  <a href="tel:+4631403440">031 - 40 35 40</a></p>
                     </div>
+
                     <h1 className="xlarge">Fastighetsskötsel</h1>
                     <p>AK Fastighetsskötsel AB anvsvarar för fastighetsskötseln i samtliga fastigheter. Ni kontakta dem via mejl eller telefon enligt nedan vid eventuellt behov. </p>
                     <p>Måndag - fredag: 07.00 - 11.00</p>
@@ -29,8 +30,10 @@ export default function Kontakt() {
                     <p><b>Telefon:</b> <a href="tel:+46712456789">0712 - 456 789</a></p>
                     <p><b>Epost:</b> <a href="mailto:info@birkabo.se">info@birkabo.se</a></p>
 
-                    <p>Birkagatan 55A</p>
-                    <p>416 56, Göteborg</p>
+                    <h2>Fakturering och besöksadress</h2>
+                    <p>Birkabo Förvaltning, <br />
+                        Birkagatan 55A, <br />
+                        416 56 Göteborg</p>
                 </div>
             </div>
         </div>

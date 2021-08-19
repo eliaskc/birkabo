@@ -4,11 +4,16 @@
 .container
     max-width: 2000px
 
-.backButton
-    margin: -1rem 1rem 1rem -1rem
+.breadcrumb
+    background-color: white
+
+    ol
+        margin: 0
+        z-index: -1
+        background-color: transparent
+        padding-left: 0
 
 .carousel
-
     .thumbs
         padding: 0
 
@@ -22,25 +27,31 @@
 
 .contentContainer
     padding: 2rem
-    
+
 .embedMap
     width: 100%
     height: 300px
     border-radius: 0.25rem
 
+@media screen and (min-width: 760px)
+    .carousel
+        margin-top: 2rem
+
 @media screen and (min-width: 960px)
     .container
         width: 100%
         padding: 4rem
-
         display: grid
         // grid-template-columns: calc(50% - 2rem) calc(50% - 2rem)
         // grid-template-columns: calc(60% - 2rem) calc(40% - 2rem)
         grid-template-columns: 2fr 1.25fr
-        grid-gap: 4rem
+        grid-column-gap: 4rem
+
+    .breadcrumb
+        width: auto
 
     .carousel
-        margin: 0
+        margin: -2rem 0 0 0
         grid-column: 1
         width: 100%
 

@@ -4,9 +4,32 @@ import Image from 'next/image';
 import { DotButton, PrevButton, NextButton } from "./EmblaCarouselButtons";
 import { Thumb } from './EmblaCarouselThumb'
 import { useState, useEffect, useCallback } from "react";
+import { mediaByIndexVR, mediaVR } from '../public/img/VR_gallery/indexVR'
+import { mediaByIndexB51, mediaB51 } from '../public/img/B51_gallery/indexB51'
+import { mediaByIndexB55, mediaB55 } from '../public/img/B55_gallery/indexB55'
+
 
 
 export default function EmblaCarousel(props) {
+  let media = [];
+  let mediaByIndex;
+  let slides;
+
+  if (!props.estateShort) {
+    return
+  } else if (props.estateShort === "VR") {
+    media = mediaVR;
+    mediaByIndex = mediaByIndexVR;
+  } else if (props.estateShort === "B51") {
+    media = mediaB51;
+    mediaByIndex = mediaByIndexB51;
+  } else if (props.estateShort === "B55") {
+    media = mediaB55;
+    mediaByIndex = mediaByIndexB55;
+  }
+
+  slides = Array.from(Array(media.length).keys());
+
   const [mainViewportRef, embla] = useEmblaCarousel({
     loop: "true"
   });
@@ -49,18 +72,16 @@ export default function EmblaCarousel(props) {
     embla.on("select", onSelect);
   }, [embla, setScrollSnaps, onSelect]);
 
-  const SLIDE_COUNT = 5;
-  const slides = Array.from(Array(SLIDE_COUNT).keys());
-
   return (
     <div className={styles.container}>
       <div className={styles.embla} >
         <div className={styles.embla__viewport} ref={mainViewportRef}>
           <div className={styles.embla__container}>
             {slides.map((index) => (
-              <div className={styles.embla__slide} key={index}>
+              <div className={styles.embla__slide} key={index} style={ mediaByIndex(index).height > mediaByIndex(index).width ? { "min-width": "50%" } : { "min-width": "100%" }}>
                 <div className={styles.embla__slide__inner}>
-                  <Image className={styles.embla__slide__inner_img} src={props.galleryPath + '/' + (index + 1) + '.jpg'} layout="fill" objectFit="cover"></Image>
+                  {/* <Image className={styles.embla__slide__inner_img} src={props.galleryPath + '/' + (index + 1) + '.jpg'} layout="fill" objectFit="cover"></Image> */}
+                  <Image className={styles.embla__slide__inner_img} src={mediaByIndex(index)} layout="fill" objectFit="cover"></Image>
                 </div>
               </div>
             ))}

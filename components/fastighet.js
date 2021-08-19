@@ -1,5 +1,6 @@
 import styles from "../styles/modules/components/Fastighet.module.sass"
 import EmblaCarousel from "./EmblaCarousel"
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 export default function Fastighet(props) {
     var galleryPath = "/img/" + props.estateShort + "_gallery"
@@ -7,7 +8,12 @@ export default function Fastighet(props) {
     return (
         <div className={styles.container}>
             <div className={styles.carousel}>
-                <EmblaCarousel galleryPath={galleryPath}></EmblaCarousel>
+                <Breadcrumb className={styles.breadcrumb}>
+                    <Breadcrumb.Item href="#">Hem</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/fastigheter">Våra fastigheter</Breadcrumb.Item>
+                    <Breadcrumb.Item active>{props.estateName}</Breadcrumb.Item>
+                </Breadcrumb>
+                <EmblaCarousel galleryPath={galleryPath} estateShort={props.estateShort}></EmblaCarousel>
             </div>
 
             <div className={styles.contentContainer}>
