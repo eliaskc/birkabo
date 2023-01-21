@@ -1,39 +1,35 @@
-import styles from '../styles/modules/Hem.module.sass'
 import Image from 'next/image'
 import Link from 'next/link'
-import Button from 'react-bootstrap/Button'
 
-import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9001.jpg'
-import welcomeImgMobile from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
+import welcomeImgAlt from '../public/img/Birkagatan/20190521-IMG_9001.jpg'
+import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
 
 export default function Hem() {
 
   return (
-    <div className={styles.container}>
-      <div className={styles.welcomeImg}>
-        <Image src={welcomeImgMobile} alt="Bild av uteplats på Birkagatan 55" /* width={1200} height={600} */ layout="fill" objectFit="cover"></Image>
+    <div className='container grid grid-cols-1 gap-y-8 justify-items-center mx-2 mb-16 lg:grid-cols-4 lg:gap-16 lg:m-16 lg:grid-rows-[2fr,_1fr]'>
+      <div className='relative h-72 w-screen lg:w-full lg:h-full lg:col-start-3 lg:col-span-2'>
+        <Image className='lg:rounded-lg' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" /* width={1200} height={600} */ layout="fill" objectFit="cover"></Image>
       </div>
 
-      <div className={styles.textContainer}>
-        <h1 className="large">Välkommen till</h1>
-        <h1 className="xxlarge">Birkabo Förvaltning</h1>
+      <div className='self-center place-self-start lg:col-span-2 lg:col-start-1 lg:row-start-1'>
+        <h1 className="text-4xl font-light m-0">Välkommen till</h1>
+        <h1 className="text-5xl font-bold m-0">Birkabo Förvaltning</h1>
       </div>
 
 
-      <div className={styles.buttonContainer}>
-        <Link href="/fastigheter">
-          <Button variant="homeScreenButton">Våra fastigheter</Button>
-        </Link>
-        <Link href="/info">
-          <Button variant="homeScreenButton">Hyresgästinformation</Button>
-        </Link>
-        <Link href="/kontakt">
-          <Button variant="homeScreenButton">Kontakta oss</Button>
-        </Link>
-        <Link href="/om">
-          <Button variant="homeScreenButton">Om Birkabo</Button>
-        </Link>
-      </div>
+      <Link href="/fastigheter">
+        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-5/6 lg:row-start-2 lg:rounded-lg hover:bg-emerald-200'>Våra fastigheter</button>
+      </Link>
+      <Link href="/info">
+        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-5/6 lg:row-start-2 lg:rounded-lg hover:bg-emerald-200'>Hyresgästinformation</button>
+      </Link>
+      <Link href="/kontakt">
+        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-5/6 lg:row-start-2 lg:rounded-lg hover:bg-emerald-200'>Kontakta oss</button>
+      </Link>
+      <Link href="/om">
+        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-5/6 lg:row-start-2 lg:rounded-lg hover:bg-emerald-200'>Om Birkabo</button>
+      </Link>
     </div>
   )
 }
