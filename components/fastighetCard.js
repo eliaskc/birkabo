@@ -1,21 +1,20 @@
-import { Card } from 'react-bootstrap'
 import Link from 'next/link'
-import Image from 'next/image'
-
-import styles from "../styles/modules/components/FastighetCard.module.sass"
 
 export default function FastighetCard(props) {
-    var imgSrc = "/img/previews/" + props.estateShort + ".jpg"
+    let bgImg = ''
+    if (props.estateShort === "VR") {
+        bgImg = "bg-VR"
+    } else if (props.estateShort === "B51") {
+        bgImg = "bg-B51"
+    } else if (props.estateShort === "B55") {
+        bgImg = "bg-B55"
+    }
 
     return (
         <Link href={"fastigheter/" + props.estateShort}>
-            <Card className={styles.card}>
-                <Image src={imgSrc} /* width={1200} height={800} */ layout="fill" objectFit="cover"></Image>
-
-                <Card.ImgOverlay className={styles.cardOverlay}>
-                    <Card.Title className={styles.cardTitle}>{props.estateName}</Card.Title>
-                </Card.ImgOverlay>
-            </Card>
+            <div className={bgImg + " flex items-center justify-center bg-cover bg-black/40 bg-blend-darken lg:hover:bg-black/20 lg:cursor-pointer 2xl:h-96 2xl:rounded-[1.5rem] 2xl:drop-shadow-2xl"}> 
+                <h1 className='text-white'>{props.estateName}</h1>
+            </div>
         </Link>
     )
 }

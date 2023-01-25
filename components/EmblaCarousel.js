@@ -100,21 +100,6 @@ export default function EmblaCarousel(props) {
           />
         ))}
       </div>
-
-      {/* <div className={styles["embla"] + " " + styles["embla--thumb"]}>
-        <div className={styles["embla__viewport"] + " " + styles["embla__viewport--thumb"]} ref={thumbViewportRef}>
-          <div className={styles["embla__container"] + " " + styles["embla__container--thumb"]}>
-            {slides.map((index) => (
-              <Thumb
-                onClick={() => onThumbClick(index)}
-                selected={index === selectedIndex}
-                imgSrc={props.galleryPath + '/' + (index + 1) + '.jpg'}
-                key={index}
-              />
-            ))}
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }
