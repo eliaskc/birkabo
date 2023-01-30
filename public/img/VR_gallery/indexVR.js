@@ -4,5 +4,4 @@ import media3 from "./3.jpg";
 import media4 from "./4.jpg";
 import media5 from "./5.jpg";
 
-export const mediaVR = [media1, media2, media3, media4, media5];
-export const mediaByIndexVR = index => mediaVR[index % mediaVR.length];
+export const galleryVR = [media1, media2, media3, media4, media5];

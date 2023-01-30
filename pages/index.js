@@ -7,7 +7,7 @@ import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
 export default function Hem() {
 
   return (
-    <div className='container grid grid-cols-1 gap-y-8 justify-items-center mx-2 mb-16 lg:grid-cols-4 lg:gap-16 lg:m-16 lg:grid-rows-[2fr,1fr]'>
+    <div className='container grid grid-cols-1 gap-y-8 justify-items-center px-8 mb-16 lg:grid-cols-4 lg:gap-16 lg:m-16 lg:grid-rows-[2fr,1fr]'>
       <div className='relative h-72 w-screen lg:w-full lg:h-full lg:col-start-3 lg:col-span-2'>
         <Image className='lg:rounded-lg' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" layout="fill" objectFit="cover"></Image>
       </div>
