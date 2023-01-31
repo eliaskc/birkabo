@@ -54,7 +54,8 @@ export default function Fastighet(props) {
                         },
                     }}
                     navigation={{
-                        nextEl: ".swiper-button-prev",
+                        prevEl: ".swiper-button-prev",
+                        nextEl: ".swiper-button-next",
                     }}
                     modules={[Keyboard, Pagination, Navigation]}
                     style={{
@@ -69,8 +70,17 @@ export default function Fastighet(props) {
                         </SwiperSlide>
                     ))}
 
-                    <div class="swiper-button-prev bg-yellow-300 h-20 w-20 after:content-['PREV']"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev w-[64px] h-[64px] after:content-['']">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-full h-full">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next w-[64px] h-[64px] after:content-['']">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-full h-full">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+
 
                 </Swiper>
             </div>
