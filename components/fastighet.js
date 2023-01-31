@@ -23,7 +23,7 @@ export default function Fastighet(props) {
     }
 
     return (
-        <div className="container mx-2 mb-16 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16 lg:m-16 lg:mt-8">
+        <div className="container mb-16 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16 lg:m-16 lg:mt-8">
 
             <div className="lg:col-start-1">
                 <div className="flex gap-x-2 ml-4 my-4 lg:m-0 lg:mb-8">
@@ -43,23 +43,34 @@ export default function Fastighet(props) {
                     centeredSlides={true}
                     spaceBetween={20}
                     loop={true}
+                    grabCursor={true}
                     keyboard={{
                         enabled: true,
                     }}
                     pagination={{
                         clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span class="w-6 h-6 ' + className + '">' + "</span>";
+                        },
                     }}
-                    // navigation={true}
+                    navigation={{
+                        nextEl: ".swiper-button-prev",
+                    }}
                     modules={[Keyboard, Pagination, Navigation]}
+                    style={{
+                        "--swiper-navigation-color": "#fff",
+                        "--swiper-pagination-color": "#fff",
+                    }}
                     className="h-[67vw] lg:w-[750px] lg:h-[500px] lg:rounded-xl"
                 >
                     {gallery.map((image, index) => (
-                        // <SwiperSlide key={index} className={(image.height > image.width ? '!w' : '')}>
                         <SwiperSlide key={index} className={(image.height > image.width ? 'w-[50vw] lg:w-[300px]' : '')}>
-                            {/* <Image height={500} width={image.height > image.width ? 300 : image.width} className='lg:rounded-xl h-full' src={image} alt="" /> */}
                             <Image fill={true} className='object-cover lg:rounded-xl' src={image} alt="" />
                         </SwiperSlide>
                     ))}
+
+                    <div class="swiper-button-prev bg-yellow-300 h-20 w-20 after:content-['PREV']"></div>
+                    <div class="swiper-button-next"></div>
 
                 </Swiper>
             </div>
