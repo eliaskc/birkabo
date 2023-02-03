@@ -69,8 +69,8 @@ export default function Fastighet(props) {
                         </SwiperSlide>
                     ))}
 
-                    <FaChevronCircleLeft className="hidden lg:block text-birkabo swiper-button-prev w-10 h-10 after:content-[''] rounded-full stroke-2 text-bold" />
-                    <FaChevronCircleRight className="hidden lg:block text-birkabo swiper-button-next w-10 h-10 after:content-[''] rounded-full stroke-2 text-bold" />
+                    <FaChevronCircleLeft className="hidden lg:block text-birkabo swiper-button-prev w-10 h-10 after:content-[''] rounded-full" />
+                    <FaChevronCircleRight className="hidden lg:block text-birkabo swiper-button-next w-10 h-10 after:content-[''] rounded-full" />
                 </Swiper>
             </div>
 
@@ -82,7 +82,7 @@ export default function Fastighet(props) {
                     <p><b>Område: </b>{props.area}</p>
                 </div>
 
-                <iframe className="w-full h-[300px] lg:h-[400px]" src={props.mapUrl} style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+                <iframe className="w-full h-[300px] lg:h-[400px] rounded-xl" src={props.mapUrl} style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
             </div>
         </div >
     )

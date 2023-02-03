@@ -1,18 +1,17 @@
-import Image from 'next/image'
+import { useState, useEffect } from "react";
 import Link from 'next/link'
+import Image from 'next/image'
 import logo from '../public/birkabo_logo.svg'
-import { useState } from 'react'
-// import styles from '../styles/modules/components/Header.module.sass'
-import { Squash as Hamburger } from 'hamburger-react'
-import { Menu, Popover } from '@headlessui/react'
+import {
+    Navbar,
+    MobileNav,
+} from "@material-tailwind/react";
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { Navbar, MobileNav } from '@material-tailwind/react'
+import { IoClose, IoMenu } from 'react-icons/io5'
 
-export default function Header() {
-    const [open, setOpen] = useState(false);
 
-    const handleClose = () => setOpen(false);
-    const toggleOpen = () => setOpen((h) => !h);
+export default function Example() {
+    const [openNav, setOpenNav] = useState(false);
 
     const links = [
         { href: '/', label: 'Hem' },
@@ -22,20 +21,48 @@ export default function Header() {
         { href: '/om', label: 'Om Birkabo' },
     ]
 
+    useEffect(() => {
+        window.addEventListener(
+            "resize",
+            () => window.innerWidth >= 960 && setOpenNav(false)
+        );
+    }, []);
+
+    const navList = (
+        <ul className="flex flex-col gap-6 pb-6 lg:p-0 lg:flex-row lg:items-center lg:gap-6">
+            {links.map((link) => (
+                <Link key={link.href} className='text-xl lg:transition-colors lg:duration-250 lg:hover:text-white' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
+            ))}
+        </ul>
+    );
+
     return (
-        <header className='flex justify-between h-24 items-center p-4 bg-birkabo'>
-            <Link href="/">
-                <Image onClick={handleClose} src={logo} width="150px" height="75px" />
-            </Link>
-
-            <Hamburger toggled={open} onToggle={toggleOpen}></Hamburger>
-
-
-            <menu className={open ? '' : 'max-lg:hidden font-medium'}>
-                {links.map((link) => (
-                    <Link className='text-xl mx-2 transition-colors duration-250 hover:text-white' href={link.href}>{link.label}</Link>
-                ))}
-            </menu>
-        </header >
-    )
+        <div className="flex justify-center w-full bg-birkabo">
+            <Navbar className="container text-black border-none p-0" fullWidth variant="gradient">
+                <div className="h-28 flex items-center justify-between">
+                    <Link href="/" onClick={() => setOpenNav(false)}>
+                        <Image src={logo} width={200} height={75} />
+                    </Link>
+                    <div className="max-lg:hidden">
+                        {navList}
+                    </div>
+                    {openNav ? (
+                        <IoClose
+                            className="ml-auto h-10 w-10 lg:hidden"
+                            onClick={() => setOpenNav(!openNav)} />
+                    ) : (
+                        <IoMenu
+                            className="ml-auto h-10 w-10 lg:hidden"
+                            onClick={() => setOpenNav(!openNav)} />
+                    )
+                    }
+                </div>
+                <MobileNav open={openNav}>
+                    <div className="container mx-auto">
+                        {navList}
+                    </div>
+                </MobileNav>
+            </Navbar >
+        </div>
+    );
 }
