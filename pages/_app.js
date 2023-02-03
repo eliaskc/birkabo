@@ -7,7 +7,7 @@ import Header from "../components/header"
 function MyApp({ Component, pageProps }) {
 
   return (
-    <div>
+    <div className='bg-stone-100'>
       <Head>
         <title>Birkabo Förvaltning</title>
         <meta name="description" content="Hemsida för Birkabo Förvaltning" />
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 
       <Header></Header>
 
-      <main className='bg-stone-100'>
+      <main>
         <Component {...pageProps} />
       </main>
 

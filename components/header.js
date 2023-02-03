@@ -2,39 +2,39 @@ import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../public/birkabo_logo.svg'
 import { useState } from 'react'
-import styles from '../styles/modules/components/Header.module.sass'
+// import styles from '../styles/modules/components/Header.module.sass'
 import { Squash as Hamburger } from 'hamburger-react'
+import { Menu, Popover } from '@headlessui/react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { Navbar, MobileNav } from '@material-tailwind/react'
 
 export default function Header() {
-    const [show, setShow] = useState(false);
+    const [open, setOpen] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const toggleShow = () => setShow((s) => !s);
+    const handleClose = () => setOpen(false);
+    const toggleOpen = () => setOpen((h) => !h);
+
+    const links = [
+        { href: '/', label: 'Hem' },
+        { href: '/fastigheter', label: 'Våra fastigheter' },
+        { href: '/info', label: 'Hyresgästinformation' },
+        { href: '/kontakt', label: 'Kontakta oss' },
+        { href: '/om', label: 'Om Birkabo' },
+    ]
 
     return (
-        <header className={styles.header}>
+        <header className='flex justify-between h-24 items-center p-4 bg-birkabo'>
             <Link href="/">
-                <Image onClick={handleClose} className={styles.logo} src={logo} width="150px" height="75px" />
+                <Image onClick={handleClose} src={logo} width="150px" height="75px" />
             </Link>
-            {/* <span className="material-icons md-36" onClick={toggleShow} style={{ cursor: "pointer" }}>menu</span> */}
 
-            <Hamburger toggled={show} onToggle={toggleShow}></Hamburger>
-            <menu className={styles.menu} id={show ? styles.visible : styles.hidden}>
-                <Link href="/">
-                    <h3 onClick={handleClose}>Hem</h3>
-                </Link>
-                <Link href="/fastigheter">
-                    <h3 onClick={handleClose}>Våra fastigheter</h3>
-                </Link>
-                <Link href="/info">
-                    <h3 onClick={handleClose}>Hyresgästinformation</h3>
-                </Link>
-                <Link href="/kontakt">
-                    <h3 onClick={handleClose}>Kontakta oss</h3>
-                </Link>
-                <Link href="/om">
-                    <h3 onClick={handleClose} style={{ border: "none" }}>Om Birkabo</h3>
-                </Link>
+            <Hamburger toggled={open} onToggle={toggleOpen}></Hamburger>
+
+
+            <menu className={open ? '' : 'max-lg:hidden font-medium'}>
+                {links.map((link) => (
+                    <Link className='text-xl mx-2 transition-colors duration-250 hover:text-white' href={link.href}>{link.label}</Link>
+                ))}
             </menu>
         </header >
     )

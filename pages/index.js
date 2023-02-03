@@ -6,9 +6,9 @@ import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
 export default function Hem() {
 
   return (
-    <div className='container grid grid-cols-1 gap-y-8 px-8 justify-items-center lg:grid-cols-4 lg:gap-16 lg:m-16 lg:grid-rows-[2fr,1fr]'>
+    <div className='container grid grid-cols-1 gap-y-8 mb-16 px-8 justify-items-center lg:gap-8 lg:grid-cols-4 lg:m-16 lg:grid-rows-[2fr,1fr] xl:gap-16'>
       <div className='relative h-72 w-screen lg:w-full lg:h-full lg:col-start-3 lg:col-span-2'>
-        <Image className='lg:rounded-lg object-cover' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" fill={true}></Image>
+        <Image className='object-cover lg:rounded-lg' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" fill={true}></Image>
       </div>
 
       <div className='self-center place-self-start lg:col-span-2 lg:col-start-1 lg:row-start-1'>
@@ -18,16 +18,16 @@ export default function Hem() {
 
 
       <Link href="/fastigheter" className='w-full'>
-        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-28 rounded-lg lg:h-44 lg:row-start-2 hover:bg-emerald-200'>Våra fastigheter</button>
+        <button type='button' className='text-xl break-all px-4  font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Våra fastigheter</button>
       </Link>
       <Link href="/info" className='w-full'>
-        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-28 rounded-lg lg:h-44 lg:row-start-2 hover:bg-emerald-200'>Hyresgästinformation</button>
+        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Hyresgästinformation</button>
       </Link>
       <Link href="/kontakt" className='w-full'>
-        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-28 rounded-lg lg:h-44 lg:row-start-2 hover:bg-emerald-200'>Kontakta oss</button>
+        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Kontakta oss</button>
       </Link>
       <Link href="/om" className='w-full'>
-        <button type='button' className='text-xl font-bold bg-emerald-300 w-full h-28 rounded-lg lg:h-44 lg:row-start-2 hover:bg-emerald-200'>Om Birkabo</button>
+        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Om Birkabo</button>
       </Link>
     </div>
   )

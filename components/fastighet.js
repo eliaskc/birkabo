@@ -1,7 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, Navigation, Pagination } from "swiper";
+import Link from "next/link"
+import Image from "next/image"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Keyboard, Navigation, Pagination } from "swiper"
+import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
 import { galleryVR } from '../public/img/VR_gallery/indexVR'
 import { galleryB51 } from '../public/img/B51_gallery/indexB51'
 import { galleryB55 } from '../public/img/B55_gallery/indexB55'
@@ -24,7 +25,6 @@ export default function Fastighet(props) {
 
     return (
         <div className="container mb-16 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16 lg:m-16 lg:mt-8">
-
             <div className="lg:col-start-1">
                 <div className="flex gap-x-2 ml-4 my-4 lg:m-0 lg:mb-8">
                     <Link href='/fastigheter'>
@@ -50,18 +50,17 @@ export default function Fastighet(props) {
                     pagination={{
                         clickable: true,
                         renderBullet: function (index, className) {
-                            return '<span class="w-6 h-6 ' + className + '">' + "</span>";
+                            return '<span class="bg-birkabo w-6 h-6 ' + className + '">' + "</span>";
                         },
                     }}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next",
                     }}
-                    modules={[Keyboard, Pagination, Navigation]}
                     style={{
-                        "--swiper-navigation-color": "#fff",
-                        "--swiper-pagination-color": "#fff",
+                        '--swiper-pagination-bullet-inactive-opacity': '.4',
                     }}
+                    modules={[Keyboard, Pagination, Navigation]}
                     className="h-[67vw] lg:w-[750px] lg:h-[500px] lg:rounded-xl"
                 >
                     {gallery.map((image, index) => (
@@ -70,18 +69,8 @@ export default function Fastighet(props) {
                         </SwiperSlide>
                     ))}
 
-                    <div class="swiper-button-prev w-[64px] h-[64px] after:content-['']">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-full h-full">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                        </svg>
-                    </div>
-                    <div class="swiper-button-next w-[64px] h-[64px] after:content-['']">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-full h-full">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </div>
-
-
+                    <FaChevronCircleLeft className="hidden lg:block text-birkabo swiper-button-prev w-10 h-10 after:content-[''] rounded-full stroke-2 text-bold" />
+                    <FaChevronCircleRight className="hidden lg:block text-birkabo swiper-button-next w-10 h-10 after:content-[''] rounded-full stroke-2 text-bold" />
                 </Swiper>
             </div>
 
