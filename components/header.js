@@ -37,8 +37,8 @@ export default function Example() {
     );
 
     return (
-        <div className="flex justify-center w-full bg-birkabo">
-            <Navbar className="container text-black border-none p-0" fullWidth variant="gradient">
+        <div className="flex justify-center w-full bg-birkabo px-8 lg:p-0">
+            <Navbar className="container text-black border-none p-0" fullWidth>
                 <div className="h-28 flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)}>
                         <Image src={logo} width={200} height={75} />
@@ -57,10 +57,12 @@ export default function Example() {
                     )
                     }
                 </div>
-                <MobileNav open={openNav}>
-                    <div className="container mx-auto">
-                        {navList}
-                    </div>
+                <MobileNav open={openNav} className='h-auto opacity-100'>
+                    {openNav ? (
+                        <div className="container mx-auto z-10">
+                            {navList}
+                        </div>
+                    ) : null}
                 </MobileNav>
             </Navbar >
         </div>
