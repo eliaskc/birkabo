@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function FastighetCard(props) {
+export default function EstateCard(props) {
     let bgImg = ''
     if (props.estateShort === "VR") {
         bgImg = "bg-VR"

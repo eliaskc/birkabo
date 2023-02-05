@@ -16,7 +16,8 @@ export default function Example() {
     const links = [
         { href: '/', label: 'Hem' },
         { href: '/fastigheter', label: 'Våra fastigheter' },
-        { href: '/info', label: 'Hyresgästinformation' },
+        { href: '/ansokan', label: 'Ansökan' },
+        { href: '/blanketter', label: 'Blanketter' },
         { href: '/kontakt', label: 'Kontakta oss' },
         { href: '/om', label: 'Om Birkabo' },
     ]

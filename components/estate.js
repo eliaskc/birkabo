@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-export default function Fastighet(props) {
+export default function Estate(props) {
     var gallery;
 
     if (props.estateShort === "VR") {

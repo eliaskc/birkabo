@@ -20,14 +20,14 @@ export default function Hem() {
       <Link href="/fastigheter" className='w-full'>
         <button type='button' className='text-xl break-all px-4  font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Våra fastigheter</button>
       </Link>
-      <Link href="/info" className='w-full'>
-        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Hyresgästinformation</button>
+      <Link href="/ansokan" className='w-full'>
+        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Ansökan</button>
+      </Link>
+      <Link href="/blanketter" className='w-full'>
+        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Blanketter</button>
       </Link>
       <Link href="/kontakt" className='w-full'>
         <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Kontakta oss</button>
-      </Link>
-      <Link href="/om" className='w-full'>
-        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-lg lg:h-36 lg:row-start-2 hover:bg-emerald-200'>Om Birkabo</button>
       </Link>
     </div>
   )
