@@ -10,7 +10,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoClose, IoMenu } from 'react-icons/io5'
 
 
-export default function Example() {
+export default function Header() {
     const [openNav, setOpenNav] = useState(false);
 
     const links = [
@@ -32,7 +32,7 @@ export default function Example() {
     const navList = (
         <ul className="flex flex-col gap-6 pb-6 lg:p-0 lg:flex-row lg:items-center lg:gap-6">
             {links.map((link) => (
-                <Link key={link.href} className='text-xl lg:transition-colors lg:duration-250 lg:hover:text-white' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
+                <Link key={link.href} className='text-xl text-center lg:transition-colors lg:duration-250 lg:hover:text-white' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
             ))}
         </ul>
     );

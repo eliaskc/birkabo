@@ -13,6 +13,8 @@ module.exports = {
       },
       colors: {
         'birkabo': '#96D1FF',
+        'link': '#93c5fd',
+        'link-darker': '#1d4ed8',
       },
     },
   },
