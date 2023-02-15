@@ -5,6 +5,13 @@ import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
 
 export default function Hem() {
 
+  const links = [
+    { href: '/fastigheter', label: 'Våra fastigheter' },
+    { href: '/ansokan', label: 'Ansökan' },
+    { href: '/blanketter', label: 'Blanketter' },
+    { href: '/kontakt', label: 'Kontakta oss' },
+  ]
+
   return (
     <div className='container grid grid-cols-1 gap-y-8 mb-16 px-8 justify-items-center lg:gap-8 lg:grid-cols-4 lg:mt-8 lg:mb-32 lg:p-0 lg:grid-rows-[2.5fr,1fr] lg:max-h-[50rem]'>
       <div className='relative h-72 w-screen lg:w-full lg:h-full lg:col-start-3 lg:col-span-2'>
@@ -16,19 +23,11 @@ export default function Hem() {
         <h1 className="text-5xl font-bold m-0">Birkabo Förvaltning</h1>
       </div>
 
-
-      <Link href="/fastigheter" className='w-full'>
-        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-2xl lg:h-40 lg:row-start-2 hover:bg-emerald-200'>Våra fastigheter</button>
-      </Link>
-      <Link href="/ansokan" className='w-full'>
-        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-2xl lg:h-40 lg:row-start-2 hover:bg-emerald-200'>Ansökan</button>
-      </Link>
-      <Link href="/blanketter" className='w-full'>
-        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-2xl lg:h-40 lg:row-start-2 hover:bg-emerald-200'>Blanketter</button>
-      </Link>
-      <Link href="/kontakt" className='w-full'>
-        <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-2xl lg:h-40 lg:row-start-2 hover:bg-emerald-200'>Kontakta oss</button>
-      </Link>
+      {links.map((link) => (
+        <Link key={link.href} href={link.href} className='w-full'>
+          <button type='button' className='text-xl break-all px-4 font-bold bg-emerald-200 w-full h-28 rounded-2xl lg:h-40 lg:row-start-2 lg:hover:bg-emerald-300 lg:hover:underline'>{link.label}</button>
+        </Link>
+      ))}
     </div>
   )
 }
