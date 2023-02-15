@@ -27,12 +27,14 @@ export default function Estate(props) {
         <div className="container mb-16 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16 lg:m-16 lg:mt-8">
             <div className="lg:col-start-1">
                 <div className="flex gap-x-2 ml-4 my-4 lg:m-0 lg:mb-8">
-                    <Link href='/fastigheter'>
-                        <span className="text-blue-500 lg:hover:underline">Våra fastigheter</span>
+                    <Link href='/'>
+                        <span className="text-link-darker underline">Hem</span>
                     </Link>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" />
-                    </svg>
+                    /
+                    <Link href='/fastigheter'>
+                        <span className="text-link-darker underline">Våra fastigheter</span>
+                    </Link>
+                    /
                     <Link href={`/fastigheter/${props.estateShort}`}>
                         <span className="text-gray-500 cursor-not-allowed">{props.estateName}</span>
                     </Link>

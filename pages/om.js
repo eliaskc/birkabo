@@ -1,32 +1,25 @@
-import styles from "../styles/modules/Om.module.sass"
 import Image from 'next/image'
-
 import headerImg from "./../public/img/headers/historia.jpg"
 
-export default function Om() {
+export default function About() {
 
     return (
-        <div className={styles.container}>
-            <div className={styles.headerImg}>
-                <Image src={headerImg} layout="fill" objectFit="cover"></Image>
+        <div className='grid grid-rows-[1fr,1.25fr] lg:grid-cols-[1.75fr,1fr] lg:grid-rows-1 2xl:container'>
+        {/* <div className='grid grid-rows-[1fr,1.25fr] grid-cols-1'> */}
+            {/* <div className='relative h-80 w-screen'> */}
+            <div className='relative'>
+                <Image src={headerImg} fill className='object-cover'></Image>
             </div>
-            <div className={styles.textContainer}>
+            <div className='container p-8 justify-self-center'>
+            {/* <div className='p-8'> */}
                 <div>
-                    <h1 className="xlarge">Om Birkabo</h1>
-                </div>
-                <div>
-                    <h2>Historia</h2>
+                    <p className='text-4xl font-semibold mb-4'>Om Birkabo</p>
                     <p>Birkabo Förvaltning grundades 1995 av Bertil Kjellberg och sedan dess har fastigheterna fortsatt
                         förvaltats av familjen Kjellberg.</p>
                     <p>Idag är det Johannes Kjellberg Carlson & Peter Carlson som ....</p>
                 </div>
-
-                <div>
-                    <h2>Ytterligare stycke?</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo tempora libero et dolorum voluptatum
-                        ab eaque itaque animi dicta. </p>
-                </div>
             </div>
+            
         </div>
     )
 }

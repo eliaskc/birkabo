@@ -6,7 +6,6 @@ import {
     Navbar,
     MobileNav,
 } from "@material-tailwind/react";
-import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoClose, IoMenu } from 'react-icons/io5'
 
 
@@ -39,7 +38,7 @@ export default function Header() {
 
     return (
         <div className="flex justify-center w-full bg-birkabo px-8 lg:p-0">
-            <Navbar className="container text-black border-none p-0" fullWidth>
+            <Navbar className="container text-black border-none p-0 bg-birkabo" fullWidth>
                 <div className="h-28 flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)}>
                         <Image src={logo} width={200} height={75} />
