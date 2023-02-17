@@ -13,7 +13,7 @@ export default function Hem() {
   ]
 
   return (
-    <div className='container grid grid-cols-1 gap-y-8 mb-16 px-8 justify-items-center lg:gap-8 lg:grid-cols-4 lg:mt-8 lg:mb-32 lg:p-0 lg:grid-rows-[2.5fr,1fr] lg:max-h-[50rem]'>
+    <div className='container grid grid-cols-1 gap-y-8 mb-16 px-8 justify-items-center lg:gap-8 lg:gap-y-16 lg:grid-cols-4 lg:mb-16 lg:p-0 lg:py-8 lg:grid-rows-[2.5fr,1fr] lg:max-h-[50rem]'>
       <div className='relative h-72 w-screen lg:w-full lg:h-full lg:col-start-3 lg:col-span-2'>
         <Image className='object-cover lg:rounded-2xl' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" fill={true}></Image>
       </div>

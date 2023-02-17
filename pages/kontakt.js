@@ -10,7 +10,7 @@ export default function Contact() {
             <div className="relative w-screen h-80">
                 <Image className="object-cover" src={headerImg} fill></Image>
             </div>
-            <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
+            <div className="container grid grid-cols-1 gap-8 p-8 lg:px-0 lg:grid-cols-2">
                 <div>
                     <div className="bg-red-600 text-white p-4 rounded-lg mb-8">
                         <p className="text-4xl font-semibold mb-4">Journummer</p>

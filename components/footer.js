@@ -12,8 +12,8 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="flex justify-center w-full bg-slate-700">
-            <div className="container grid grid-cols-1 gap-y-8 p-8 pb-16 bg-slate-700 text-white lg:grid-cols-[1.25fr,1.25fr,2fr] lg:px-0">
+        <footer className="flex justify-center w-full bg-slate-700 text-white">
+            <div className="container grid grid-cols-1 gap-y-8 p-8 pb-16 lg:grid-cols-[1.25fr,1.25fr,2fr] lg:px-0">
                 <div className="flex flex-col">
                     <h1 className="text-2xl font-bold mb-4">Meny</h1>
                     {links.map((link) => (

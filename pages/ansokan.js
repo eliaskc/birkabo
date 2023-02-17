@@ -8,7 +8,7 @@ export default function Application() {
             <div className="relative w-screen h-80">
                 <Image className="object-cover" src={headerImg} fill></Image>
             </div>
-            <div className="container p-8">
+            <div className="container p-8 lg:px-0 ">
                 <p className="text-4xl font-semibold mb-4">Ansökan</p>
                 <p className="mb-4">Om ni önskar ansöka om lägenhet kan ni kontakta oss på <a href="mailto:info@birkabo.se">info@birkabo.se</a>. </p>
                 <p className="mb-4">Vänligen inkludera följande information:</p>

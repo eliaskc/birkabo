@@ -37,9 +37,9 @@ export default function Header() {
     );
 
     return (
-        <div className="flex justify-center w-full bg-birkabo px-8 lg:p-0">
-            <Navbar className="container text-black border-none p-0 bg-birkabo" fullWidth>
-                <div className="h-28 flex items-center justify-between">
+        <div className="fixed z-10 h-20 flex justify-center w-full px-8 backdrop-blur-xl lg:p-0">
+            <Navbar className="container text-black border-none p-0" fullWidth>
+                <div className="h-full flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)}>
                         <Image src={logo} width={200} height={75} />
                     </Link>
