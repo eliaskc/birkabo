@@ -13,9 +13,9 @@ export default function Hem() {
   ]
 
   return (
-    <div className='container grid grid-cols-1 gap-y-8 mb-16 px-8 justify-items-center lg:gap-8 lg:gap-y-16 lg:grid-cols-4 lg:mb-16 lg:p-0 lg:py-8 lg:grid-rows-[2.5fr,1fr] lg:max-h-[50rem]'>
+    <div className='container grid grid-cols-1 gap-y-8 mb-16 px-8 justify-items-center lg:gap-8 lg:gap-y-16 lg:grid-cols-4 lg:mb-16 lg:p-0 lg:py-8 lg:grid-rows-[2.5fr,1fr]'>
       <div className='relative h-72 w-screen lg:w-full lg:h-full lg:col-start-3 lg:col-span-2'>
-        <Image className='object-cover lg:rounded-2xl' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" fill={true}></Image>
+        <Image className='object-cover lg:rounded-2xl' src={welcomeImg} alt="Bild av uteplats på Birkagatan 55" fill></Image>
       </div>
 
       <div className='self-center place-self-start lg:col-span-2 lg:col-start-1 lg:row-start-1'>

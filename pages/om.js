@@ -4,8 +4,8 @@ import headerImg from "./../public/img/headers/historia.jpg"
 export default function About() {
 
     return (
-        <div className='container pt-8 pb-16 grid grid-rows-[1fr,1.25fr] lg:grid-cols-[1.25fr,1fr] lg:grid-rows-1 2xl:container'>
-            <div className='relative'>
+        <div className='container pt-8 pb-16 grid grid-rows-[1fr,1.25fr] lg:grid-cols-[1.25fr,1fr] lg:grid-rows-1'>
+            <div className='relative h-72 w-screen lg:w-full lg:h-full'>
                 <Image src={headerImg} fill className='object-cover lg:rounded-2xl'></Image>
             </div>
             <div className='p-8 lg:py-0 justify-self-center'>
