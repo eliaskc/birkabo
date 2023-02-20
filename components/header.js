@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
+import logo from '../public/birkabo_logo_no_bg.png'
 import {
     Navbar,
     MobileNav,
@@ -19,8 +20,6 @@ export default function Header() {
         { href: '/kontakt', label: 'Kontakta oss' },
         { href: '/om', label: 'Om Birkabo' },
     ]
-
-    const logoUrl = '/../public/birkabo_logo_no_bg.png';
 
     useEffect(() => {
         window.addEventListener(
@@ -42,7 +41,7 @@ export default function Header() {
             <Navbar className="container text-black border-none p-0 shadow-none" fullWidth>
                 <div className="h-full flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)}>
-                        <Image src={logoUrl} width={200} height={75} />
+                        <Image src={logo} width={200} height={75} />
                     </Link>
                     <div className="max-lg:hidden">
                         {navList}
