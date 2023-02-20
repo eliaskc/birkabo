@@ -38,8 +38,8 @@ export default function Header() {
     );
 
     return (
-        <div className="fixed z-10 h-20 flex justify-center w-full px-8 backdrop-blur-xl lg:p-0">
-            <Navbar className="container text-black border-none p-0" fullWidth>
+        <div className="fixed z-10 h-20 flex justify-center w-full px-8 backdrop-blur-lg bg-white/25 shadow-md lg:p-0">
+            <Navbar className="container text-black border-none p-0 shadow-none" fullWidth>
                 <div className="h-full flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)}>
                         <Image src={logoUrl} width={200} height={75} />
