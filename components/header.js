@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../public/birkabo_logo_no_bg.png'
@@ -11,6 +11,19 @@ import { IoClose, IoMenu } from 'react-icons/io5'
 
 export default function Header() {
     const [openNav, setOpenNav] = useState(false);
+    const [scrolledPastHeader, setScrolledPastHeader] = useState(0);
+
+    useEffect(() => {
+        const updateScrolledPastHeader = () => {
+            setScrolledPastHeader(window.scrollY > 0);
+        }
+
+        updateScrolledPastHeader();
+
+        window.addEventListener("scroll", updateScrolledPastHeader);
+
+        return () => window.removeEventListener("scroll", updateScrolledPastHeader);
+    }, []);
 
     const links = [
         { href: '/', label: 'Hem' },
@@ -31,17 +44,17 @@ export default function Header() {
     const navList = (
         <ul className="flex flex-col gap-6 pb-6 lg:p-0 lg:flex-row lg:items-center lg:gap-6">
             {links.map((link) => (
-                <Link key={link.href} className='text-xl text-center lg:transition-colors lg:duration-250 lg:hover:text-white' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
+                <Link key={link.href} className='text-xl text-center lg:transition-colors lg:duration-250 lg:hover:underline lg:decoration-2' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
             ))}
         </ul>
     );
 
     return (
-        <div className="fixed z-10 h-20 flex justify-center w-full px-8 backdrop-blur-lg bg-white/25 shadow-md lg:p-0">
+        <div className={`fixed z-10 h-20 flex justify-center w-full px-8 transition-all duration-250 ease-in-out lg:p-0 ${(scrolledPastHeader ? 'backdrop-blur-lg bg-white/25 shadow-md' : '')}`}>
             <Navbar className="container text-black border-none p-0 shadow-none" fullWidth>
                 <div className="h-full flex items-center justify-between">
-                    <Link href="/" onClick={() => setOpenNav(false)}>
-                        <Image src={logo} width={200} height={75} />
+                    <Link href="/" onClick={() => setOpenNav(false)} className='relative h-full w-52'>
+                        <Image src={logo} fill className="object-contain" />
                     </Link>
                     <div className="max-lg:hidden">
                         {navList}
@@ -65,6 +78,6 @@ export default function Header() {
                     ) : null}
                 </MobileNav>
             </Navbar >
-        </div>
+        </div >
     );
 }
