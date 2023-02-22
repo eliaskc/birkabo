@@ -50,7 +50,7 @@ export default function Header() {
     );
 
     return (
-        <div className={`fixed z-10 h-20 flex justify-center w-full px-8 transition-all duration-250 ease-in-out lg:p-0 ${(scrolledPastHeader ? 'backdrop-blur-lg bg-white/25 shadow-md' : '')}`}>
+        <div className={`sticky z-10 h-20 top-0 flex justify-center w-full px-8 transition-all duration-250 ease-in-out lg:p-0 ${(scrolledPastHeader ? 'backdrop-blur-lg bg-white/25 shadow-md' : '')}`}>
             <Navbar className="container text-black border-none p-0 shadow-none" fullWidth>
                 <div className="h-full flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)} className='relative h-full w-52'>
