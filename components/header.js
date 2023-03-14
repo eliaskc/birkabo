@@ -42,15 +42,15 @@ export default function Header() {
     }, []);
 
     const navList = (
-        <ul className="flex flex-col gap-6 pb-6 lg:p-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className="flex flex-col gap-6 lg:p-0 lg:flex-row lg:items-center lg:gap-6">
             {links.map((link) => (
-                <Link key={link.href} className='text-xl text-center lg:transition-colors lg:duration-250 lg:hover:underline lg:decoration-2' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
+                <Link key={link.href} className='text-2xl text-center underline decoration-2 font-medium lg:no-underline lg:text-xl lg:transition-colors lg:duration-250 lg:hover:underline' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
             ))}
         </ul>
     );
 
     return (
-        <div className={`sticky z-10 h-20 top-0 flex justify-center w-full px-8 transition-all duration-250 ease-in-out lg:p-0 ${(scrolledPastHeader ? 'backdrop-blur-lg bg-white/25 shadow-md' : '')}`}>
+        <div className={`sticky z-10 h-20 top-0 flex justify-center w-full px-8 transition-all duration-250 ease-in-out lg:p-0 ${(scrolledPastHeader ? 'backdrop-blur-lg bg-white/25 shadow-md' : '')} ${(openNav ? 'mb-[24rem] ' : '')}`}>
             <Navbar className="container text-black border-none p-0 shadow-none" fullWidth>
                 <div className="h-full flex items-center justify-between">
                     <Link href="/" onClick={() => setOpenNav(false)} className='relative h-full w-52'>
@@ -72,7 +72,7 @@ export default function Header() {
                 </div>
                 <MobileNav open={openNav} className='h-auto opacity-100'>
                     {openNav ? (
-                        <div className="container mx-auto z-10">
+                        <div className="container mx-auto z-10 pt-8 flex justify-center">
                             {navList}
                         </div>
                     ) : null}
