@@ -17,7 +17,7 @@ export default function Footer() {
                 <div className="flex flex-col">
                     <h1 className="text-2xl font-bold mb-4">Meny</h1>
                     {links.map((link) => (
-                        <Link key={link.href} className='text-lg my-2 font-medium underline' href={link.href}>{link.label}</Link>
+                        <Link key={link.href} className='text-lg my-2 font-medium underline text-link' href={link.href}>{link.label}</Link>
                     ))}
                 </div>
 
