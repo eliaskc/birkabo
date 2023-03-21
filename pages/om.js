@@ -11,9 +11,8 @@ export default function About() {
             <div className='p-8 lg:py-0 justify-self-center'>
                 <div>
                     <p className='text-4xl font-semibold mb-4'>Om Birkabo</p>
-                    <p>Birkabo Förvaltning grundades 1995 av Bertil Kjellberg och sedan dess har fastigheterna fortsatt
-                        förvaltats av familjen Kjellberg.</p>
-                    <p>Idag är det Johannes Kjellberg Carlson & Peter Carlson som ....</p>
+                    <p>Birkabo Förvaltning är ett familjeföretag som grundades 1995 av Bertil Kjellberg. </p>
+                    <p className='mt-2'>Sedan 2017 tillbaka drivs bolaget av Johannes Kjellberg Carlson & Peter Carlson.</p>
                 </div>
             </div>
 

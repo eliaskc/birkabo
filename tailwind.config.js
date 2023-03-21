@@ -15,6 +15,7 @@ module.exports = {
         'birkabo': '#96D1FF',
         'link': '#93c5fd',
         'link-darker': '#1d4ed8',
+        'button': '#96D1FF',
       },
     },
   },

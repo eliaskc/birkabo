@@ -44,7 +44,7 @@ export default function Header() {
     const navList = (
         <ul className="flex flex-col gap-6 lg:p-0 lg:flex-row lg:items-center lg:gap-6">
             {links.map((link) => (
-                <Link key={link.href} className='text-2xl text-center underline decoration-2 font-medium lg:no-underline lg:text-xl lg:transition-colors lg:duration-250 lg:hover:underline' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
+                <Link key={link.href} className='text-2xl text-center underline decoration-2 font-medium lg:no-underline lg:text-lg lg:transition-colors lg:duration-250 lg:hover:underline' href={link.href} onClick={() => setOpenNav(false)}>{link.label}</Link>
             ))}
         </ul>
     );

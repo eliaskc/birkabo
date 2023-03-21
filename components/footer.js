@@ -12,20 +12,20 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="flex justify-center w-full bg-slate-700 text-white">
+        <footer className="flex justify-center pt-4 w-full bg-cyan-700 text-white">
             <div className="container grid grid-cols-1 gap-y-8 p-8 pb-16 lg:grid-cols-[1.25fr,1.25fr,2fr] lg:px-0">
                 <div className="flex flex-col">
                     <h1 className="text-2xl font-bold mb-4">Meny</h1>
                     {links.map((link) => (
-                        <Link key={link.href} className='text-lg my-1 font-medium text-link underline' href={link.href}>{link.label}</Link>
+                        <Link key={link.href} className='text-lg my-2 font-medium underline' href={link.href}>{link.label}</Link>
                     ))}
                 </div>
 
                 <div className="flex flex-col">
                     <h1 className="text-2xl font-bold mb-4">Kontakt</h1>
 
-                    <Link className="text-lg my-1 font-medium text-link underline" href="tel:0706566726">0706 - 56 67 26</Link>
-                    <Link className="text-lg my-1 font-medium text-link underline" href="mailto:info@birkabo.se">info@birkabo.se</Link>
+                    <Link className="text-lg my-2 font-medium text-link underline" href="tel:0706566726">0706 - 56 67 26</Link>
+                    <Link className="text-lg my-2 font-medium text-link underline" href="mailto:info@birkabo.se">info@birkabo.se</Link>
 
                     <p className="text-lg mt-4 font-medium">Birkagatan 55A</p>
                     <p className="text-lg font-medium">416 56 Göteborg</p>

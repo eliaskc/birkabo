@@ -79,9 +79,7 @@ export default function Estate(props) {
             <div className="p-8 lg:p-0">
                 <h1 className="text-4xl">{props.estateName}</h1>
                 <div className="py-8">
-                    <p>{props.estateDescription}</p>
-                    <p><b>Byggnadsår: </b>{props.year}</p>
-                    <p><b>Område: </b>{props.area}</p>
+                    {props.estateDescription}
                 </div>
 
                 <iframe className="w-full h-[300px] lg:h-[400px] rounded-xl" src={props.mapUrl} style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
