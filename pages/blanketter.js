@@ -25,8 +25,8 @@ export default function Forms() {
                     </div>
 
                     <div className="mt-8 lg:m-0">
-                        <button className="bg-button border-4 border-black shadow-md p-4 rounded-xl text-xl font-semibold mb-4 flex flex-row gap-4 items-center lg:hover:underline">Autogiro <FiDownload /></button>
-                        <button className="bg-button border-4 border-black shadow-md p-4 rounded-xl text-xl font-semibold mb-4 flex flex-row gap-4 items-center lg:hover:underline">Andrahandsuthyrning <FiDownload /></button>
+                        <button className="border-4 border-black shadow-md p-4 rounded-xl text-xl font-semibold mb-4 flex flex-row gap-4 items-center justify-between w-full lg:w-auto lg:hover:underline">Autogiro <FiDownload /></button>
+                        <button className="border-4 border-black shadow-md p-4 rounded-xl text-xl font-semibold mb-4 flex flex-row gap-4 items-center justify-between w-full lg:w-auto lg:hover:underline">Andrahandsuthyrning <FiDownload /></button>
                     </div>
                 </div >
             </div >
