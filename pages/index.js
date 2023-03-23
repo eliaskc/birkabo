@@ -25,7 +25,7 @@ export default function Hem() {
 
       {links.map((link) => (
         <Link key={link.href} href={link.href} className='w-full'>
-          <button type='button' className='border-4 border-black shadow-lg text-xl break-all px-4 font-bold w-full h-20 rounded-2xl lg:h-40 lg:row-start-2 lg:hover:underline'>{link.label}</button>
+          <button type='button' className='border-4 border-black shadow-lg text-xl break-all px-4 font-bold w-full h-20 rounded-2xl lg:border-8 lg:h-40 lg:row-start-2 lg:hover:underline'>{link.label}</button>
         </Link>
       ))}
 
