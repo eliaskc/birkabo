@@ -4,9 +4,6 @@ import Link from 'next/link'
 import headerImg from "./../public/img/headers/kontakt.jpg"
 
 export default function Contact() {
-    const phoneNumber = '0706566726';
-    const email = 'info@birkabo.se';
-
     return (
         <div className="flex flex-col items-center">
             <div className="relative w-screen h-80">
@@ -16,7 +13,7 @@ export default function Contact() {
                 <div>
                     <div className="bg-red-600 text-white p-4 rounded-lg mb-8">
                         <p className="text-4xl font-semibold mb-4">Journummer</p>
-                        <p>Vid akut vattenläcka när AK Fastighetsskötsel (se nedan) ej kan nås, ring Göteborgs El & Rörjour på: <Link className="text-xl text-link underline font-bold" href="tel:031500120">031 - 50 01 20</Link></p>
+                        <p>Vid akut vattenläcka när AK Fastighetsskötsel (se nedan) ej kan nås, ring Göteborgs El & Rörjour på: <Link className="text-xl text-link underline font-bold" href="tel:031500120">031&#8209;50&nbsp;01&nbsp;20</Link></p>
                     </div>
 
                     <div>
@@ -24,11 +21,11 @@ export default function Contact() {
                         <p>AK Fastighetsskötsel AB anvsvarar för fastighetsskötseln i samtliga fastigheter. Ni kontakta dem via mejl eller telefon enligt nedan vid eventuellt behov. </p>
                         <div className="my-4">
                             <p>
-                                <span className="font-bold">Telefon:</span>
-                                <Link className="text-link-darker underline" href="tel:0730849200">0730 - 84 92 00</Link>
+                                <span className="font-bold">Telefon: </span>
+                                <Link className="text-link-darker underline" href="tel:0730849200">0730&#8209;84&nbsp;92&nbsp;00</Link>
                             </p>
                             <p>
-                                <span className="font-bold">E-post:</span>
+                                <span className="font-bold">E-post: </span>
                                 <Link className="text-link-darker underline" href="mailto:info@akfast.se">info@akfast.se</Link>
                             </p>
                             <p>
@@ -42,12 +39,12 @@ export default function Contact() {
                     <p>För övriga frågor eller funderingar kan ni kontakta oss på Birkabo direkt via mejl eller telefon enligt nedan.</p>
                     <div className="mt-4">
                         <p>
-                            <span className="font-bold">Telefon:</span>
-                            <Link className="text-link-darker underline" href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
+                            <span className="font-bold">Telefon: </span>
+                            <Link className="text-link-darker underline" href={"tel:0706566726"}>0706&#8209;56&nbsp;67&nbsp;26</Link>
                         </p>
                         <p>
-                            <span className="font-bold">E-post:</span>
-                            <Link className="text-link-darker underline" href={`mailto:${email}`}>{email}</Link>
+                            <span className="font-bold">E-post: </span>
+                            <Link className="text-link-darker underline" href="mailto:info@birkabo.se">info@birkabo.se</Link>
                         </p>
                     </div>
 
