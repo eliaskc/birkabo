@@ -10,9 +10,11 @@ export default function Forms() {
                 <Image className="object-cover" src={headerImg} fill></Image>
             </div>
             <div className="container p-8">
-                <p className="mb-4 text-4xl font-semibold">Blanketter</p>
                 <div className="gap-8 lg:grid lg:grid-cols-[1.5fr,1fr]">
                     <div className="flex flex-col gap-4">
+                        <p className="mb-4 text-4xl font-semibold">
+                            Blanketter
+                        </p>
                         <p>
                             Här hittar ni blanketter för att ansöka om autogiro
                             eller andrahandsuthyrning. <br />

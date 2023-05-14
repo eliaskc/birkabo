@@ -15,7 +15,7 @@ export default function Hem() {
         <div className="container mb-16 grid grid-cols-1 justify-items-center gap-y-8 px-8 lg:mb-16 lg:grid-cols-4 lg:grid-rows-[2.5fr,1fr] lg:gap-8 lg:gap-y-16 lg:p-0 lg:py-8">
             <div className="relative h-72 w-screen lg:col-span-2 lg:col-start-3 lg:h-full lg:w-full">
                 <Image
-                    className="object-cover lg:rounded-2xl"
+                    className="object-cover lg:rounded-2xl lg:border-4 lg:border-black"
                     src={welcomeImg}
                     alt="Bild av uteplats på Birkagatan 55"
                     fill

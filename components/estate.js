@@ -86,7 +86,7 @@ export default function Estate(props) {
                         >
                             <Image
                                 fill={true}
-                                className="object-cover lg:rounded-xl"
+                                className="object-cover lg:rounded-xl lg:border-4 lg:border-black"
                                 src={image}
                                 alt=""
                             />
@@ -103,9 +103,8 @@ export default function Estate(props) {
                 <div className="py-8">{props.estateDescription}</div>
 
                 <iframe
-                    className="h-[300px] w-full rounded-xl lg:h-[400px]"
+                    className="h-[300px] w-full rounded-xl border-4 border-black lg:h-[400px]"
                     src={props.mapUrl}
-                    // style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                 ></iframe>

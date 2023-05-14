@@ -49,7 +49,7 @@ export default function Footer() {
                 </div>
 
                 <iframe
-                    className="w-full rounded-lg lg:h-full"
+                    className="w-full rounded-lg border-4 border-black lg:h-full"
                     src={mapUrl}
                     width="300"
                     height="225"

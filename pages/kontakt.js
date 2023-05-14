@@ -11,7 +11,7 @@ export default function Contact() {
             </div>
             <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
                 <div>
-                    <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
+                    <div className="mb-8 rounded-lg border-4 border-black bg-red-600 p-4 text-white">
                         <p className="mb-4 text-4xl font-semibold">
                             Journummer
                         </p>
