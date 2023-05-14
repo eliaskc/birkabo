@@ -2,8 +2,6 @@
 @tailwind components
 @tailwind utilities
 
-html,
-body
-    padding: 0
-    margin: 0
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+@layer utilities
+    .animated-underline
+        @apply after:relative after:bottom-0 after:left-0 after:block after:h-1 after:w-full lg:after:scale-x-0 after:transform after:bg-black after:transition-transform after:duration-300 after:ease-in-out lg:hover:after:scale-x-100

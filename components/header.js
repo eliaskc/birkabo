@@ -39,11 +39,11 @@ export default function Header() {
     }, []);
 
     const navList = (
-        <ul className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-6 lg:p-0">
+        <ul className="flex flex-col items-center gap-6 lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
                 <Link
                     key={link.href}
-                    className="text-center text-3xl font-medium underline decoration-[3px] lg:text-lg lg:no-underline lg:transition-colors lg:hover:underline"
+                    className="animated-underline text-center text-3xl font-medium lg:text-lg"
                     href={link.href}
                     onClick={() => setOpenNav(false)}
                 >
@@ -62,7 +62,7 @@ export default function Header() {
             }`}
         >
             <Navbar
-                className="container border-none p-0 text-black shadow-none"
+                className="container border-none bg-transparent p-0 text-black shadow-none"
                 fullWidth
             >
                 <div className="flex h-full items-center justify-between">
