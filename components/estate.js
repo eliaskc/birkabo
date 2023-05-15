@@ -25,7 +25,7 @@ export default function Estate(props) {
     return (
         <div className="container mb-16 lg:m-16 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16">
             <div className="lg:col-start-1">
-                <div className="my-4 ml-4 flex gap-x-2 text-base font-semibold lg:m-0 lg:mb-4 lg:text-lg">
+                <div className="my-4 ml-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
                     <Link href="/" className="animated-underline text-black">
                         Hem
                     </Link>
@@ -99,7 +99,7 @@ export default function Estate(props) {
             </div>
 
             <div className="p-8 lg:p-0">
-                <h1 className="text-4xl">{props.estateName}</h1>
+                <h1 className="text-4xl font-semibold">{props.estateName}</h1>
                 <div className="py-8">{props.estateDescription}</div>
 
                 <iframe

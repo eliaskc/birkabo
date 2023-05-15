@@ -89,7 +89,7 @@ export default function Header() {
                 </div>
                 <MobileNav
                     open={openNav}
-                    className="absolute left-0 h-auto bg-white py-8 shadow-lg"
+                    className="absolute left-0 hidden h-auto bg-white py-8 shadow-lg"
                 >
                     {navList}
                 </MobileNav>

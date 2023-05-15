@@ -6,7 +6,7 @@ import Header from '../components/header';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <div className="bg-gradient-to-br from-birkabo via-transparent font-sans">
+        <div className="bg-gradient-to-br from-birkabo via-transparent font-['Work_Sans']">
             {/* <div className='bg-stone-100'> */}
             <Head>
                 <title>Birkabo Förvaltning</title>
@@ -16,6 +16,16 @@ function MyApp({ Component, pageProps }) {
                 />
                 <meta name="viewport" content="width=device-width" />
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans:wght@100..900&family=Lobster&display=swap"
+                    rel="stylesheet"
+                />
             </Head>
 
             <Header />
