@@ -40,11 +40,11 @@ export default function Header() {
     }, []);
 
     const navList = (
-        <ul className="flex flex-col items-center gap-6 lg:flex-row lg:gap-6 lg:p-0">
+        <ul className="flex flex-col items-start gap-6 pl-8 lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
                 <Link
                     key={link.href}
-                    className="animated-underline text-center text-3xl font-medium lg:text-lg"
+                    className="animated-underline text-center text-xl font-medium lg:text-lg"
                     href={link.href}
                     onClick={() => setOpenNav(false)}
                 >
@@ -60,7 +60,7 @@ export default function Header() {
                 scrolledPastHeader && !openNav
                     ? 'bg-white/25 shadow-md backdrop-blur-lg'
                     : ''
-            } ${openNav ? `bg-${mobileMenuColor}` : ''}`}
+            } ${openNav ? 'bg-white' : ''}`}
         >
             <Navbar
                 className="container h-auto border-none bg-transparent p-0 text-black shadow-none"
@@ -89,7 +89,7 @@ export default function Header() {
                 </div>
                 <MobileNav
                     open={openNav}
-                    className={`bg-${mobileMenuColor} absolute left-0 h-auto py-8 shadow-lg`}
+                    className="absolute left-0 h-auto bg-white py-8 shadow-lg"
                 >
                     {navList}
                 </MobileNav>
