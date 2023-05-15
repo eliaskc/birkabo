@@ -6,7 +6,7 @@ import Header from '../components/header';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <div className="bg-gradient-to-br from-birkabo via-transparent font-['Work_Sans']">
+        <div className="bg-gradient-to-br from-birkabo via-transparent font-['Lobster']">
             {/* <div className='bg-stone-100'> */}
             <Head>
                 <title>Birkabo Förvaltning</title>
