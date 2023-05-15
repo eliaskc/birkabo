@@ -8,6 +8,7 @@ import { IoClose, IoMenu } from 'react-icons/io5';
 export default function Header() {
     const [openNav, setOpenNav] = useState(false);
     const [scrolledPastHeader, setScrolledPastHeader] = useState(0);
+    const mobileMenuColor = 'white';
 
     useEffect(() => {
         const updateScrolledPastHeader = () => {
@@ -56,13 +57,13 @@ export default function Header() {
     return (
         <div
             className={`sticky top-0 z-10 flex h-20 w-full justify-center px-8 transition-all duration-100 ease-in-out lg:p-0 ${
-                scrolledPastHeader
+                scrolledPastHeader && !openNav
                     ? 'bg-white/25 shadow-md backdrop-blur-lg'
                     : ''
-            }`}
+            } ${openNav ? `bg-${mobileMenuColor}` : ''}`}
         >
             <Navbar
-                className="container border-none bg-transparent p-0 text-black shadow-none"
+                className="container h-auto border-none bg-transparent p-0 text-black shadow-none"
                 fullWidth
             >
                 <div className="flex h-full items-center justify-between">
@@ -88,13 +89,9 @@ export default function Header() {
                 </div>
                 <MobileNav
                     open={openNav}
-                    className="absolute left-0 h-auto bg-white/25 shadow-md backdrop-blur-lg"
+                    className={`bg-${mobileMenuColor} absolute left-0 h-auto py-8 shadow-lg`}
                 >
-                    {openNav ? (
-                        <div className="container z-10 mx-auto flex justify-center py-8">
-                            {navList}
-                        </div>
-                    ) : null}
+                    {navList}
                 </MobileNav>
             </Navbar>
         </div>
