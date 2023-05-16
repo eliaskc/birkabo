@@ -26,10 +26,6 @@ export default function Estate(props) {
         <div className="container mb-16 lg:m-16 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16">
             <div className="lg:col-start-1">
                 <div className="my-4 ml-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
-                    <Link href="/" className="animated-underline text-black">
-                        Hem
-                    </Link>
-                    /
                     <Link
                         href="/fastigheter"
                         className="animated-underline text-black"
