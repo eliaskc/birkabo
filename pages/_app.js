@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }) {
             </Head>
 
             <Header />
+            <div className="h-20"></div>
 
             <main className="z-1 flex min-h-screen w-full justify-center pb-16">
                 <Component {...pageProps} />

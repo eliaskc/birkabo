@@ -38,7 +38,7 @@ export default function Header() {
     }, []);
 
     const navList = (
-        <ul className="flex flex-col items-start gap-6 pl-8 lg:flex-row lg:gap-6 lg:p-0">
+        <ul className="flex flex-col items-start gap-6 lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
                 <Link
                     key={link.href}
@@ -54,41 +54,39 @@ export default function Header() {
 
     return (
         <div
-            className={`sticky z-10 w-full justify-center px-8 transition-all duration-100 ease-in-out lg:p-0 ${
-                scrolledPastHeader || !openNav
-                    ? 'bg-white/25 shadow-md backdrop-blur-lg'
+            className={`fixed z-10 flex w-full flex-col items-center px-8 transition-all duration-100 ease-in-out lg:p-0 ${
+                scrolledPastHeader || openNav
+                    ? 'bg-white/25 shadow-xl backdrop-blur-2xl'
                     : ''
             }`}
         >
-            <div className="container sticky border-none bg-transparent p-0 text-black shadow-none">
-                <div className="flex h-full items-center justify-between">
-                    <Link
-                        href="/"
-                        onClick={() => setOpenNav(false)}
-                        className="relative h-full w-52"
-                    >
-                        <Image src={logo} fill className="object-contain" />
-                    </Link>
-                    <div className="max-lg:hidden">{navList}</div>
-                    {openNav ? (
-                        <IoClose
-                            className="ml-auto h-10 w-10 lg:hidden"
-                            onClick={() => setOpenNav(!openNav)}
-                        />
-                    ) : (
-                        <IoMenu
-                            className="ml-auto h-10 w-10 lg:hidden"
-                            onClick={() => setOpenNav(!openNav)}
-                        />
-                    )}
-                </div>
-                <div
-                    className={`sticky left-0 w-screen py-8 shadow-lg ${
-                        !openNav ? 'hidden' : ''
-                    }`}
+            <div className="container flex h-20 items-center justify-between">
+                <Link
+                    href="/"
+                    onClick={() => setOpenNav(false)}
+                    className="relative h-full w-52"
                 >
-                    {navList}
-                </div>
+                    <Image src={logo} fill className="object-contain" />
+                </Link>
+                <div className="max-lg:hidden">{navList}</div>
+                {openNav ? (
+                    <IoClose
+                        className="ml-auto h-10 w-10 lg:hidden"
+                        onClick={() => setOpenNav(!openNav)}
+                    />
+                ) : (
+                    <IoMenu
+                        className="ml-auto h-10 w-10 lg:hidden"
+                        onClick={() => setOpenNav(!openNav)}
+                    />
+                )}
+            </div>
+            <div
+                className={`flex w-full justify-start py-8 ${
+                    !openNav ? 'hidden' : ''
+                }`}
+            >
+                {navList}
             </div>
         </div>
     );
