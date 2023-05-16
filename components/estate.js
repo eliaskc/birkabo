@@ -54,7 +54,7 @@ export default function Estate(props) {
                         clickable: true,
                         renderBullet: function (index, className) {
                             return (
-                                '<span class="bg-birkabo w-6 h-6 ' +
+                                '<span class="bg-birkabo w-6 h-6 lg:hover:scale-125 lg:duration-300 ' +
                                 className +
                                 '">' +
                                 '</span>'
@@ -89,8 +89,11 @@ export default function Estate(props) {
                         </SwiperSlide>
                     ))}
 
-                    <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block" />
-                    <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block" />
+                    {/* https://codepen.io/poopsplat/pen/EPaeEE */}
+                    {/* https://codepen.io/chrysokitty/pen/eYoRWK */}
+                    {/* https://codepen.io/nickryan/pen/wvdqEj */}
+                    <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block lg:duration-300 lg:hover:scale-110" />
+                    <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block lg:duration-300 lg:hover:-translate-x-1 lg:hover:scale-110" />
                 </Swiper>
             </div>
 
@@ -101,7 +104,6 @@ export default function Estate(props) {
                 <iframe
                     className="h-[300px] w-full rounded-xl lg:h-[400px]"
                     src={props.mapUrl}
-                    // style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                 ></iframe>
