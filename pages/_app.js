@@ -6,7 +6,13 @@ import Header from '../components/header';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <div className="bg-gradient-to-br from-birkabo via-birkabo/[.15] font-['Work_Sans']">
+        <div
+            className=" font-['Work_Sans'] contrast-125"
+            style={{
+                background:
+                    'linear-gradient(125deg, rgba(150,209,255,1), rgba(150,209,255,0.15), rgba(255,255,255,0)), url(/grain.svg) !important',
+            }}
+        >
             <Head>
                 <title>Birkabo Förvaltning</title>
                 <meta
