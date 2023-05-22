@@ -19,7 +19,7 @@ export default function Contact() {
                             Vid akut vattenläcka när AK Fastighetsskötsel (se
                             nedan) ej kan nås, ring Göteborgs El & Rörjour på:{' '}
                             <Link
-                                className="text-xl font-bold text-link underline"
+                                className="animated-underline text-xl font-bold text-link"
                                 href="tel:031500120"
                             >
                                 031&#8209;50&nbsp;01&nbsp;20
@@ -41,7 +41,7 @@ export default function Contact() {
                             <p>
                                 <span className="font-bold">Telefon: </span>
                                 <Link
-                                    className="text-link-darker underline"
+                                    className="thin-animated-underline text-link-darker after:bg-link-darker"
                                     href="tel:0730849200"
                                 >
                                     0730&#8209;84&nbsp;92&nbsp;00
@@ -50,7 +50,7 @@ export default function Contact() {
                             <p>
                                 <span className="font-bold">E-post: </span>
                                 <Link
-                                    className="text-link-darker underline"
+                                    className="thin-animated-underline text-link-darker after:bg-link-darker"
                                     href="mailto:info@akfast.se"
                                 >
                                     info@akfast.se
@@ -80,7 +80,7 @@ export default function Contact() {
                         <p>
                             <span className="font-bold">Telefon: </span>
                             <Link
-                                className="text-link-darker underline"
+                                className="thin-animated-underline text-link-darker after:bg-link-darker"
                                 href={'tel:0706566726'}
                             >
                                 0706&#8209;56&nbsp;67&nbsp;26
@@ -89,7 +89,7 @@ export default function Contact() {
                         <p>
                             <span className="font-bold">E-post: </span>
                             <Link
-                                className="text-link-darker underline"
+                                className="thin-animated-underline text-link-darker after:bg-link-darker"
                                 href="mailto:info@birkabo.se"
                             >
                                 info@birkabo.se

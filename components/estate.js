@@ -89,9 +89,6 @@ export default function Estate(props) {
                         </SwiperSlide>
                     ))}
 
-                    {/* https://codepen.io/poopsplat/pen/EPaeEE */}
-                    {/* https://codepen.io/chrysokitty/pen/eYoRWK */}
-                    {/* https://codepen.io/nickryan/pen/wvdqEj */}
                     <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block lg:duration-300 lg:hover:scale-110" />
                     <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block lg:duration-300 lg:hover:-translate-x-1 lg:hover:scale-110" />
                 </Swiper>

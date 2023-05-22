@@ -38,16 +38,19 @@ export default function Header() {
     }, []);
 
     const navList = (
-        <ul className="flex flex-col items-start gap-6 lg:flex-row lg:gap-6 lg:p-0">
+        <ul className="flex w-full flex-col items-start gap-6 lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
-                <Link
-                    key={link.href}
-                    className="animated-underline text-center text-xl font-medium lg:text-lg"
-                    href={link.href}
-                    onClick={() => setOpenNav(false)}
-                >
-                    {link.label}
-                </Link>
+                <div className="max-lg:w-full">
+                    <Link
+                        key={link.href}
+                        className="lg:animated-underline text-center text-xl font-bold after:bg-white lg:text-lg lg:font-medium lg:after:-bottom-2 lg:after:bg-black"
+                        href={link.href}
+                        onClick={() => setOpenNav(false)}
+                    >
+                        {link.label}
+                    </Link>
+                    <hr className="mt-4 border-[1px] border-black/25 lg:hidden" />
+                </div>
             ))}
         </ul>
     );

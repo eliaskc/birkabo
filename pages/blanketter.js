@@ -22,7 +22,7 @@ export default function Forms() {
                         <p>
                             <span className="font-semibold"> E-post: </span>
                             <Link
-                                className="text-link-darker underline"
+                                className="thin-animated-underline text-link-darker after:bg-link-darker"
                                 href="mailto:info@birkabo.se"
                             >
                                 info@birkabo.se

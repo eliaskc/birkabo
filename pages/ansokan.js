@@ -13,7 +13,7 @@ export default function Application() {
                     Om ni är intresserade av att bo hos oss ber vi er skicka en
                     intresseanmälan till{' '}
                     <a
-                        className="text-link-darker"
+                        className="thin-animated-underline text-link-darker after:bg-link-darker"
                         href="mailto:info@birkabo.se"
                     >
                         info@birkabo.se
