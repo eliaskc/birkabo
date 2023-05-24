@@ -1,6 +1,6 @@
 import '../styles/globals.sass';
 import Head from 'next/head';
-import { Inter, Work_Sans } from "next/font/google";
+import { Inter, Work_Sans } from 'next/font/google';
 
 import Footer from '../components/footer';
 import Header from '../components/header';
