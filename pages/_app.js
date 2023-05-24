@@ -1,12 +1,16 @@
 import '../styles/globals.sass';
 import Head from 'next/head';
+import { Inter, Work_Sans } from '@next/font/google';
 
 import Footer from '../components/footer';
 import Header from '../components/header';
 
+const inter = Inter({ subsets: ['latin'] });
+const workSans = Work_Sans({ subsets: ['latin'] });
+
 function MyApp({ Component, pageProps }) {
     return (
-        <div className="bg-gradient-to-br from-birkabo via-birkabo/[.15] font-['Work_Sans']">
+        <div className="--font-workSans bg-gradient-to-br from-birkabo via-birkabo/[.15]">
             <Head>
                 <title>Birkabo Förvaltning</title>
                 <meta
@@ -20,10 +24,6 @@ function MyApp({ Component, pageProps }) {
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
                     crossorigin
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans:wght@100..900&family=Lobster&display=swap"
-                    rel="stylesheet"
                 />
             </Head>
             <Header />

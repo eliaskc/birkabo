@@ -40,9 +40,8 @@ export default function Header() {
     const navList = (
         <ul className="flex w-full flex-col items-start gap-6 lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
-                <div className="max-lg:w-full">
+                <div key={link.href} className="max-lg:w-full">
                     <Link
-                        key={link.href}
                         className="lg:animated-underline text-center text-xl font-bold after:bg-white lg:text-lg lg:font-medium lg:after:-bottom-2 lg:after:bg-black"
                         href={link.href}
                         onClick={() => setOpenNav(false)}
