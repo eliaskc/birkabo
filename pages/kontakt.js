@@ -6,9 +6,9 @@ import headerImg from './../public/img/headers/kontakt.jpg';
 export default function Contact() {
     return (
         <div className="flex flex-col items-center">
-            <div className="relative h-80 w-screen">
-                <Image className="object-cover" src={headerImg} fill></Image>
-            </div>
+            {/* https://codepen.io/michaelfangman/pen/kWqbeb
+            https://www.solodev.com/blog/web-design/how-to-create-a-parallax-hero-image.stml */}
+            <div className="relative h-80 w-screen bg-[url('/img/headers/kontakt.jpg')] bg-cover bg-fixed"></div>
             <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
                 <div>
                     <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
