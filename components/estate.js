@@ -23,12 +23,12 @@ export default function Estate(props) {
     }
 
     return (
-        <div className="container mb-16 lg:m-16 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.5fr] lg:gap-x-16">
+        <div className="container mb-16 lg:m-16 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.25fr] lg:gap-x-16">
             <div className="lg:col-start-1">
                 <div className="my-4 ml-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
                     <Link
                         href="/fastigheter"
-                        className="animated-underline text-black"
+                        className="animated-underline text-black after:bg-black"
                     >
                         Våra fastigheter
                     </Link>
@@ -43,10 +43,10 @@ export default function Estate(props) {
 
                 <Swiper
                     slidesPerView={'auto'}
-                    centeredSlides={true}
+                    centeredSlides
                     spaceBetween={20}
-                    loop={true}
-                    grabCursor={true}
+                    loop
+                    grabCursor
                     keyboard={{
                         enabled: true,
                     }}
@@ -54,7 +54,7 @@ export default function Estate(props) {
                         clickable: true,
                         renderBullet: function (index, className) {
                             return (
-                                '<span class="bg-birkabo w-6 h-6 lg:hover:scale-125 lg:duration-300 ' +
+                                '<span class="bg-birkabo rounded-lg w-6 h-6 lg:hover:scale-110 lg:duration-300 ' +
                                 className +
                                 '">' +
                                 '</span>'
@@ -66,17 +66,17 @@ export default function Estate(props) {
                         nextEl: '.swiper-button-next',
                     }}
                     style={{
-                        '--swiper-pagination-bullet-inactive-opacity': '.4',
+                        '--swiper-pagination-bullet-inactive-opacity': '.6',
                     }}
                     modules={[Keyboard, Pagination, Navigation]}
-                    className="h-[67vw] lg:h-[500px] lg:w-[750px] lg:rounded-xl"
+                    className="m-0 h-64 lg:h-[32rem] lg:w-full lg:rounded-xl"
                 >
                     {gallery.map((image, index) => (
                         <SwiperSlide
                             key={index}
                             className={
                                 image.height > image.width
-                                    ? 'w-[50vw] lg:w-[300px]'
+                                    ? 'w-1/2 lg:h-full'
                                     : ''
                             }
                         >
@@ -89,8 +89,8 @@ export default function Estate(props) {
                         </SwiperSlide>
                     ))}
 
-                    <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block lg:duration-300 lg:hover:scale-110" />
-                    <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full text-birkabo after:content-[''] lg:block lg:duration-300 lg:hover:-translate-x-1 lg:hover:scale-110" />
+                    <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
+                    <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
                 </Swiper>
             </div>
 

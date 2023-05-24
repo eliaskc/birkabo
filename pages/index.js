@@ -31,7 +31,7 @@ export default function Hem() {
                 <Link key={link.href} href={link.href} className="w-full">
                     <button
                         type="button"
-                        className="group h-24 w-full break-all rounded-2xl bg-white px-4 text-xl font-bold shadow-md duration-300 hover:shadow-xl lg:row-start-2 lg:h-32 lg:shadow-lgw lg:hover:scale-105"
+                        className="h-24 w-full break-all rounded-2xl bg-white px-4 text-xl font-bold shadow-md duration-300 hover:shadow-xl lg:row-start-2 lg:h-32 lg:shadow-lg lg:hover:scale-105"
                     >
                         {link.label}
                     </button>
