@@ -69,7 +69,7 @@ export default function Estate(props) {
                         '--swiper-pagination-bullet-inactive-opacity': '.6',
                     }}
                     modules={[Keyboard, Pagination, Navigation]}
-                    className="m-0 h-64 lg:h-[32rem] lg:w-full lg:rounded-xl"
+                    className="m-0 h-[67vw] w-full md:rounded-xl lg:h-[32rem]"
                 >
                     {gallery.map((image, index) => (
                         <SwiperSlide
