@@ -54,7 +54,7 @@ export default function Estate(props) {
                         clickable: true,
                         renderBullet: function (index, className) {
                             return (
-                                '<span class="bg-birkabo rounded-lg w-6 h-6 lg:hover:scale-110 lg:duration-300 ' +
+                                '<span class="bg-birkabo rounded-lg w-6 h-6 hover:opacity-75 duration-300 ' +
                                 className +
                                 '">' +
                                 '</span>'

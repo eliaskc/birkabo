@@ -37,10 +37,10 @@ export default function Forms() {
                     </div>
 
                     <div className="mt-8 lg:m-0">
-                        <button className="mb-4 flex w-full flex-row items-center justify-between gap-4 rounded-xl bg-white/75 p-4 text-xl font-semibold shadow-md lg:w-auto lg:duration-300 lg:hover:scale-105 lg:hover:shadow-xl">
+                        <button className="button mb-4 flex w-full flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-auto">
                             Autogiro <FiDownload />
                         </button>
-                        <button className="mb-4 flex w-full flex-row items-center justify-between gap-4 rounded-xl bg-white/75 p-4 text-xl font-semibold shadow-md lg:w-auto lg:duration-300 lg:hover:scale-105 lg:hover:shadow-xl">
+                        <button className="button mb-4 flex w-full flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-auto">
                             Andrahandsuthyrning <FiDownload />
                         </button>
                     </div>

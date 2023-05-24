@@ -9,7 +9,6 @@
     },
     "dependencies": {
         "@headlessui/react": "^1.7.9",
-        "@next/font": "^13.4.3",
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "embla-carousel": "^4.5.3",
         "hamburger-react": "^2.4.1",
