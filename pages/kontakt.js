@@ -5,11 +5,15 @@ import headerImg from './../public/img/headers/kontakt.jpg';
 
 export default function Contact() {
     return (
-        <div className="flex flex-col items-center">
-            <div className="relative h-80 w-screen">
-                <Image className="object-cover" src={headerImg} fill></Image>
+        <div className="container flex flex-col items-center">
+            <div className="relative h-80 w-screen 2xl:w-full">
+                <Image
+                    className="object-cover 2xl:rounded-xl"
+                    src={headerImg}
+                    fill
+                ></Image>
             </div>
-            <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
+            <div className="grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
                 <div>
                     <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
                         <p className="mb-4 text-4xl font-semibold">

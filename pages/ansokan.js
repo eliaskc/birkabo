@@ -3,11 +3,15 @@ import headerImg from './../public/img/headers/info.jpg';
 
 export default function Application() {
     return (
-        <div className="flex flex-col items-center">
-            <div className="relative h-80 w-screen">
-                <Image className="object-cover" src={headerImg} fill></Image>
+        <div className="container flex flex-col items-center">
+            <div className="relative h-80 w-screen 2xl:w-full">
+                <Image
+                    className="object-cover 2xl:rounded-xl"
+                    src={headerImg}
+                    fill
+                ></Image>
             </div>
-            <div className="container p-8 lg:px-0 ">
+            <div className="self-start p-8 lg:px-0">
                 <p className="mb-4 text-4xl font-semibold">Ansökan</p>
                 <p className="mb-4">
                     Om ni är intresserade av att bo hos oss ber vi er skicka en
