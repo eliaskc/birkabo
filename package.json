@@ -17,6 +17,7 @@
         "react-bootstrap": "^2.7.0",
         "react-dom": "^18.2.0",
         "react-icons": "^4.7.1",
+        "react-scroll-parallax": "^3.4.2",
         "sass": "^1.36.0",
         "sharp": "^0.31.3",
         "swiper": "^8.4.6",

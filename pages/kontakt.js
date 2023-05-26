@@ -1,15 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useParallax } from 'react-scroll-parallax';
 
 import headerImg from './../public/img/headers/kontakt.jpg';
 
 export default function Contact() {
+    const { ref } = useParallax({ speed: -100 });
+
     return (
-        <div className="flex flex-col items-center">
+        <div className="container flex flex-col items-center">
             {/* https://codepen.io/michaelfangman/pen/kWqbeb
             https://www.solodev.com/blog/web-design/how-to-create-a-parallax-hero-image.stml */}
-            <div className="relative h-80 w-screen bg-[url('/img/headers/kontakt.jpg')] bg-cover bg-fixed"></div>
-            <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
+            <div className="relative h-80 w-screen overflow-hidden 2xl:w-full">
+                <Image
+                    className="w-full object-cover 2xl:rounded-xl"
+                    src={headerImg}
+                    ref={ref}
+                ></Image>
+            </div>
+            <div className="grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
                 <div>
                     <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
                         <p className="mb-4 text-4xl font-semibold">

@@ -2,12 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import headerImg from './../public/img/headers/info.jpg';
 import { FiDownload } from 'react-icons/fi';
+import { useParallax } from 'react-scroll-parallax';
 
 export default function Forms() {
+    const { ref } = useParallax({ speed: -100 });
+
     return (
         <div className="flex flex-col items-center">
-            <div className="relative h-80 w-screen">
-                <Image className="object-cover" src={headerImg} fill></Image>
+            <div className="relative h-80 w-screen overflow-hidden 2xl:w-full">
+                <Image
+                    className="w-full object-cover 2xl:rounded-xl"
+                    src={headerImg}
+                    ref={ref}
+                ></Image>
             </div>
             <div className="container p-8">
                 <p className="mb-4 text-4xl font-semibold">Blanketter</p>
