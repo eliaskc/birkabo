@@ -1,41 +1,111 @@
-import styles from "../styles/modules/Kontakt.module.sass"
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import headerImg from "./../public/img/headers/kontakt.jpg"
+import headerImg from './../public/img/headers/kontakt.jpg';
 
-export default function Kontakt() {
-
+export default function Contact() {
     return (
-        <div className={styles.container}>
-            <div className={styles.headerImg}>
-                <Image src={headerImg} layout="fill" objectFit="cover"></Image>
+        <div className="flex flex-col items-center">
+            <div className="relative h-80 w-screen">
+                <Image className="object-cover" src={headerImg} fill></Image>
             </div>
-            <div className={styles.textContainer}>
-                <div className={styles.textBox}>
-                    <div className={styles.jour}>
-                        <h1 className="xlarge">Journummer</h1>
-                        <p>Vid akut vattenläcka när AK Fastighetsskötsel (se nedan) ej kan nås, ring Göteborgs El-, & Rörjour på:  <a href="tel:+4631403440">031 - 40 35 40</a></p>
+            <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
+                <div>
+                    <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
+                        <p className="mb-4 text-4xl font-semibold">
+                            Journummer
+                        </p>
+                        <p>
+                            Vid akut vattenläcka när AK Fastighetsskötsel (se
+                            nedan) ej kan nås, ring Göteborgs El & Rörjour på:{' '}
+                            <Link
+                                className="animated-underline text-xl font-bold text-link"
+                                href="tel:031500120"
+                            >
+                                031&#8209;50&nbsp;01&nbsp;20
+                            </Link>
+                        </p>
                     </div>
 
-                    <h1 className="xlarge">Fastighetsskötsel</h1>
-                    <p>AK Fastighetsskötsel AB anvsvarar för fastighetsskötseln i samtliga fastigheter. Ni kontakta dem via mejl eller telefon enligt nedan vid eventuellt behov. </p>
-                    <p>Måndag - fredag: 07.00 - 11.00</p>
-                    <p><b>Epost:</b> <a href="mailto:info@akfast.se">info@akfast.se</a></p>
-                    <p><b>Telefon:</b> <a href="tel:+46730849200">0730 - 849 200</a></p>
-                    <p>Vänligen inkludera information om vilken fastighet och lägenhet det gäller, vad felet är samt telefonnummer ni kan kontaktas på. </p>
+                    <div>
+                        <p className="mb-4 text-4xl font-semibold">
+                            Fastighetsskötsel
+                        </p>
+                        <p>
+                            AK Fastighetsskötsel AB anvsvarar för
+                            fastighetsskötseln i samtliga fastigheter. Ni
+                            kontaktar dem via mejl eller telefon enligt nedan
+                            vid eventuellt behov.{' '}
+                        </p>
+                        <div className="my-4">
+                            <p>
+                                <span className="font-bold">Telefon: </span>
+                                <Link
+                                    className="thin-animated-underline text-link-darker after:bg-link-darker"
+                                    href="tel:0730849200"
+                                >
+                                    0730&#8209;84&nbsp;92&nbsp;00
+                                </Link>
+                            </p>
+                            <p>
+                                <span className="font-bold">E-post: </span>
+                                <Link
+                                    className="thin-animated-underline text-link-darker after:bg-link-darker"
+                                    href="mailto:info@akfast.se"
+                                >
+                                    info@akfast.se
+                                </Link>
+                            </p>
+                            <p>
+                                <span className="font-bold">
+                                    Måndag - fredag:
+                                </span>{' '}
+                                07.00 - 11.00
+                            </p>
+                        </div>
+                        <p>
+                            Vänligen inkludera information om vilken fastighet
+                            och lägenhet det gäller, vad felet är samt
+                            telefonnummer ni kan kontaktas på.{' '}
+                        </p>
+                    </div>
                 </div>
-                <div className={styles.textBox}>
-                    <h1 className="xlarge">Kontoret</h1>
-                    <p>För övriga frågor eller funderingar kan ni kontakta oss på Birkabo direkt via mejl eller telefon enligt nedan.</p>
-                    <p><b>Telefon:</b> <a href="tel:+46712456789">0712 - 456 789</a></p>
-                    <p><b>Epost:</b> <a href="mailto:info@birkabo.se">info@birkabo.se</a></p>
+                <div>
+                    <p className="mb-4 text-4xl font-semibold">Birkabo</p>
+                    <p>
+                        För övriga frågor eller funderingar kan ni kontakta oss
+                        på Birkabo direkt via mejl eller telefon enligt nedan.
+                    </p>
+                    <div className="mt-4">
+                        <p>
+                            <span className="font-bold">Telefon: </span>
+                            <Link
+                                className="thin-animated-underline text-link-darker after:bg-link-darker"
+                                href={'tel:0706566726'}
+                            >
+                                0706&#8209;56&nbsp;67&nbsp;26
+                            </Link>
+                        </p>
+                        <p>
+                            <span className="font-bold">E-post: </span>
+                            <Link
+                                className="thin-animated-underline text-link-darker after:bg-link-darker"
+                                href="mailto:info@birkabo.se"
+                            >
+                                info@birkabo.se
+                            </Link>
+                        </p>
+                    </div>
 
-                    <h2>Fakturering och besöksadress</h2>
-                    <p>Birkabo Förvaltning, <br />
-                        Birkagatan 55A, <br />
-                        416 56 Göteborg</p>
+                    <p className="mb-4 mt-8 text-2xl font-semibold">
+                        Fakturerings- och besöksadress
+                    </p>
+                    <p>
+                        Birkabo Förvaltning <br /> Birkagatan 55A <br /> 416 56
+                        Göteborg
+                    </p>
                 </div>
             </div>
         </div>
-    )
+    );
 }

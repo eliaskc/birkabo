@@ -1,39 +1,42 @@
-import styles from '../styles/modules/Hem.module.sass'
-import Image from 'next/image'
-import Link from 'next/link'
-import Button from 'react-bootstrap/Button'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9001.jpg'
-import welcomeImgMobile from '../public/img/Birkagatan/20190521-IMG_9013.jpg'
+import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg';
 
 export default function Hem() {
+    const links = [
+        { href: '/fastigheter', label: 'Våra fastigheter' },
+        { href: '/ansokan', label: 'Ansökan' },
+        { href: '/blanketter', label: 'Blanketter' },
+        { href: '/kontakt', label: 'Kontakta oss' },
+    ];
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.welcomeImg}>
-        <Image src={welcomeImgMobile} alt="Bild av uteplats på Birkagatan 55" /* width={1200} height={600} */ layout="fill" objectFit="cover"></Image>
-      </div>
+    return (
+        <div className="container mb-16 grid grid-cols-1 justify-items-center gap-y-8 px-8 lg:mb-16 lg:grid-cols-4 lg:grid-rows-[2.5fr,1fr] lg:gap-8 lg:gap-y-16 lg:p-0 lg:py-8">
+            <div className="relative h-72 w-screen lg:col-span-2 lg:col-start-3 lg:h-full lg:w-full">
+                <Image
+                    className="object-cover lg:rounded-2xl"
+                    src={welcomeImg}
+                    alt="Bild av uteplats på Birkagatan 55"
+                    fill
+                ></Image>
+            </div>
 
-      <div className={styles.textContainer}>
-        <h1 className="large">Välkommen till</h1>
-        <h1 className="xxlarge">Birkabo Förvaltning</h1>
-      </div>
+            <div className="place-self-start self-center lg:col-span-2 lg:col-start-1 lg:row-start-1">
+                <h1 className="m-0 text-4xl font-light">Välkommen till</h1>
+                <h1 className="m-0 text-5xl font-bold">Birkabo Förvaltning</h1>
+            </div>
 
-
-      <div className={styles.buttonContainer}>
-        <Link href="/fastigheter">
-          <Button variant="homeScreenButton">Våra fastigheter</Button>
-        </Link>
-        <Link href="/info">
-          <Button variant="homeScreenButton">Hyresgästinformation</Button>
-        </Link>
-        <Link href="/kontakt">
-          <Button variant="homeScreenButton">Kontakta oss</Button>
-        </Link>
-        <Link href="/om">
-          <Button variant="homeScreenButton">Om Birkabo</Button>
-        </Link>
-      </div>
-    </div>
-  )
+            {links.map((link) => (
+                <Link key={link.href} href={link.href} className="w-full">
+                    <button
+                        type="button"
+                        className="button h-24 w-full break-all px-4 text-xl font-bold lg:row-start-2 lg:h-32"
+                    >
+                        {link.label}
+                    </button>
+                </Link>
+            ))}
+        </div>
+    );
 }
