@@ -42,7 +42,7 @@ export default function Header() {
             {links.map((link) => (
                 <div key={link.href} className="max-lg:w-full">
                     <Link
-                        className="lg:animated-underline text-center text-xl font-bold after:bg-white lg:text-lg lg:font-medium lg:after:-bottom-2 lg:after:bg-black"
+                        className="lg:animated-underline text-center text-xl font-bold after:bg-white lg:text-lg lg:font-medium lg:after:bg-black"
                         href={link.href}
                         onClick={() => setOpenNav(false)}
                     >

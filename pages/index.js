@@ -33,7 +33,7 @@ export default function Hem() {
                         type="button"
                         className="button h-24 w-full break-all px-4 text-xl font-bold lg:row-start-2 lg:h-32"
                     >
-                        {link.label}
+                        <span className='after:bg-black'>{link.label}</span>
                     </button>
                 </Link>
             ))}
