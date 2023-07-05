@@ -6,7 +6,7 @@ import headerImg from './../public/img/headers/kontakt.jpg';
 export default function Contact() {
     return (
         <div className="container flex flex-col items-center">
-            <div className="relative h-80 w-screen 2xl:w-[calc(100%-4rem)] 2xl:h-[40rem]">
+            <div className="relative h-80 w-screen 2xl:h-[40rem] 2xl:w-[calc(100%-4rem)]">
                 <Image
                     className="object-cover 2xl:rounded-xl"
                     src={headerImg}

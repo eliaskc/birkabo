@@ -23,83 +23,86 @@ export default function Estate(props) {
     }
 
     return (
-        <div className="container mb-16 px-8 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.25fr] lg:gap-x-16">
-            <div className="lg:col-start-1">
-                <div className="my-4 ml-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
-                    <Link
-                        href="/fastigheter"
-                        className="animated-underline text-black after:bg-black"
+        <div className="container mb-16 px-8 lg:mt-8">
+            <div className="my-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
+                <Link
+                    href="/fastigheter"
+                    className="animated-underline text-black after:bg-black"
+                >
+                    Våra fastigheter
+                </Link>
+                /
+                <Link
+                    href={`/fastigheter/${props.estateShort}`}
+                    className="cursor-default text-gray-500"
+                >
+                    {props.estateName}
+                </Link>
+            </div>
+            <div className="grid-rows-[200px,auto] lg:grid lg:grid-cols-[2fr,1fr] lg:grid-rows-2 lg:gap-16">
+                <div className="lg:col-start-1">
+                    <Swiper
+                        slidesPerView={'auto'}
+                        centeredSlides
+                        spaceBetween={20}
+                        loop
+                        grabCursor
+                        keyboard={{
+                            enabled: true,
+                        }}
+                        pagination={{
+                            clickable: true,
+                            renderBullet: function (index, className) {
+                                return (
+                                    '<span class="bg-birkabo rounded-lg w-6 h-6 hover:opacity-75 duration-300 ' +
+                                    className +
+                                    '">' +
+                                    '</span>'
+                                );
+                            },
+                        }}
+                        navigation={{
+                            prevEl: '.swiper-button-prev',
+                            nextEl: '.swiper-button-next',
+                        }}
+                        style={{
+                            '--swiper-pagination-bullet-inactive-opacity': '.6',
+                        }}
+                        modules={[Keyboard, Pagination, Navigation]}
+                        className="m-0 h-[67vw] overflow-hidden max-sm:-mx-8 max-sm:w-screen sm:rounded-xl lg:h-[32rem]"
                     >
-                        Våra fastigheter
-                    </Link>
-                    /
-                    <Link
-                        href={`/fastigheter/${props.estateShort}`}
-                        className="cursor-default text-gray-500"
-                    >
-                        {props.estateName}
-                    </Link>
+                        {gallery.map((image, index) => (
+                            <SwiperSlide
+                                key={index}
+                                className={
+                                    image.height > image.width
+                                        ? 'w-1/2 lg:h-full'
+                                        : ''
+                                }
+                            >
+                                <Image
+                                    fill={true}
+                                    className="object-cover lg:rounded-xl"
+                                    src={image}
+                                    alt=""
+                                />
+                            </SwiperSlide>
+                        ))}
+
+                        <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
+                        <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
+                    </Swiper>
                 </div>
 
-                <Swiper
-                    slidesPerView={'auto'}
-                    centeredSlides
-                    spaceBetween={20}
-                    loop
-                    grabCursor
-                    keyboard={{
-                        enabled: true,
-                    }}
-                    pagination={{
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return (
-                                '<span class="bg-birkabo rounded-lg w-6 h-6 hover:opacity-75 duration-300 ' +
-                                className +
-                                '">' +
-                                '</span>'
-                            );
-                        },
-                    }}
-                    navigation={{
-                        prevEl: '.swiper-button-prev',
-                        nextEl: '.swiper-button-next',
-                    }}
-                    style={{
-                        '--swiper-pagination-bullet-inactive-opacity': '.6',
-                    }}
-                    modules={[Keyboard, Pagination, Navigation]}
-                    className="m-0 h-[67vw] w-full md:rounded-xl lg:h-[32rem]"
-                >
-                    {gallery.map((image, index) => (
-                        <SwiperSlide
-                            key={index}
-                            className={
-                                image.height > image.width
-                                    ? 'w-1/2 lg:h-full'
-                                    : ''
-                            }
-                        >
-                            <Image
-                                fill={true}
-                                className="object-cover lg:rounded-xl"
-                                src={image}
-                                alt=""
-                            />
-                        </SwiperSlide>
-                    ))}
-
-                    <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
-                    <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
-                </Swiper>
-            </div>
-
-            <div className="p-8 lg:p-0">
-                <h1 className="text-4xl font-semibold">{props.estateName}</h1>
-                <div className="py-8">{props.estateDescription}</div>
+                <div className="py-8 lg:p-0">
+                    <h1 className="text-4xl font-semibold">
+                        {props.estateName}
+                    </h1>
+                    <div className="py-8">{props.estateDescription}</div>
+                </div>
 
                 <iframe
-                    className="h-[300px] w-full rounded-xl lg:h-[400px]"
+                    className="col-start-2 h-[300px] w-full rounded-xl lg:col-span-2 lg:row-start-2 lg:h-full"
                     src={props.mapUrl}
                     allowFullScreen=""
                     loading="lazy"

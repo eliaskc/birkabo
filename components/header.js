@@ -46,7 +46,7 @@ export default function Header() {
                     onClick={() => setOpenNav(false)}
                 >
                     <span className="max-lg:my-6">{link.label}</span>
-                    <hr className="border-[2px] border-black lg:hidden" />
+                    <hr className="border-[1px] border-black lg:hidden" />
                 </Link>
             ))}
         </ul>
@@ -82,7 +82,7 @@ export default function Header() {
                 )}
             </div>
             <div
-                className={`flex h-[calc(100vh-5rem)] w-full py-8 ${
+                className={`flex h-[calc(100vh-5rem)] w-full p-8 ${
                     !openNav ? 'hidden' : ''
                 }`}
             >
