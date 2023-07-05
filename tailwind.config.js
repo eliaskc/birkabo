@@ -5,6 +5,9 @@ module.exports = {
         './components/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
+        fontFamily: {
+            body: ['var(--font-inter)'],
+        },
         extend: {
             backgroundImage: {
                 B51: "url('/img/previews/B51.jpg')",

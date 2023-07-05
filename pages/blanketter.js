@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi';
 export default function Forms() {
     return (
         <div className="container flex flex-col items-center">
-            <div className="relative h-80 w-screen 2xl:w-full">
+            <div className="relative h-80 w-screen 2xl:w-[calc(100%-4rem)] 2xl:h-[40rem]">
                 <Image
                     className="object-cover 2xl:rounded-xl"
                     src={headerImg}
@@ -45,25 +45,25 @@ export default function Forms() {
                             href="/blanketter/autogiro.pdf"
                             download="Ansökan av autogiro.pdf"
                         >
-                            <button className="button mb-4 flex w-full flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-auto">
+                            <div className="button mb-4 flex flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-fit">
                                 Autogiro <FiDownload />
-                            </button>
+                            </div>
                         </a>
                         <a
                             href="/blanketter/andrahand_mall.pdf"
                             download="Mall för andrahandsuthyrning.pdf"
                         >
-                            <button className="button mb-4 flex w-full flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-auto">
+                            <div className="button mb-4 flex flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-fit">
                                 Mall för andrahandsuthyrning <FiDownload />
-                            </button>
+                            </div>
                         </a>
                         <a
                             href="/blanketter/andrahand_avtal.pdf"
                             download="Avtal för andrahandsuthyrning.pdf"
                         >
-                            <button className="button mb-4 flex w-full flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-auto">
+                            <div className="button mb-4 flex flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-fit">
                                 Avtal för andrahandsuthyrning <FiDownload />
-                            </button>
+                            </div>
                         </a>
                     </div>
                 </div>

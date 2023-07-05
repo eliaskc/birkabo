@@ -23,7 +23,7 @@ export default function Estate(props) {
     }
 
     return (
-        <div className="container mb-16 lg:m-16 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.25fr] lg:gap-x-16">
+        <div className="container mb-16 px-8 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.25fr] lg:gap-x-16">
             <div className="lg:col-start-1">
                 <div className="my-4 ml-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
                     <Link
