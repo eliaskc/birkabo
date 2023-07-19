@@ -46,7 +46,7 @@ export default function Header() {
                     onClick={() => setOpenNav(false)}
                 >
                     <span className="max-lg:my-6">{link.label}</span>
-                    <hr className="border-[1px] border-black lg:hidden" />
+                    <hr className="border-[2px] border-black lg:hidden" />
                 </Link>
             ))}
         </ul>
@@ -56,7 +56,7 @@ export default function Header() {
         <div
             className={`fixed z-10 flex w-full flex-col items-center transition-all duration-100 ease-in-out ${
                 scrolledPastHeader || openNav
-                    ? 'bg-white/50 shadow-xl backdrop-blur-2xl lg:shadow-md lg:backdrop-blur-lg'
+                    ? 'bg-white/50 shadow-xl backdrop-blur-lg lg:shadow-md lg:backdrop-blur-lg'
                     : ''
             }`}
         >

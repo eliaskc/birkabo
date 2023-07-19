@@ -3,15 +3,11 @@ import headerImg from './../public/img/headers/historia.jpg';
 
 export default function About() {
     return (
-        <div className="container grid grid-rows-[1fr,1.25fr] pt-8 pb-16 lg:grid-cols-[1.25fr,1fr] lg:grid-rows-1">
-            <div className="relative h-72 w-screen lg:h-full lg:w-[calc(100%-2rem)] lg:left-8 2xl:h-[50rem]">
-                <Image
-                    src={headerImg}
-                    fill
-                    className="object-cover lg:rounded-2xl"
-                ></Image>
+        <div className="container flex flex-col gap-8 pt-8 pb-16 max-lg:items-center lg:flex-row">
+            <div className="w-screen lg:left-8 lg:w-4/6">
+                <Image src={headerImg} className="lg:rounded-2xl"></Image>
             </div>
-            <div className="justify-self-center p-8 lg:py-0">
+            <div className="px-8">
                 <div>
                     <p className="mb-4 text-4xl font-semibold">Om Birkabo</p>
                     <p>

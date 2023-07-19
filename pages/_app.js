@@ -13,7 +13,7 @@ const inter = Inter({
 function MyApp({ Component, pageProps }) {
     return (
         <div
-            className={`${inter.variable} bg-gradient-to-br from-birkabo via-birkabo/[.15] font-body`}
+            className={`${inter.variable} flex min-h-screen flex-col bg-gradient-to-br from-birkabo via-birkabo/[.15] font-body`}
         >
             <Head>
                 <title>Birkabo Förvaltning</title>
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Header />
             <div className="h-20"></div> {/* Dummy spacer for header */}
-            <main className="z-1 flex min-h-[calc(100vh-5rem)] w-full justify-center">
+            <main className="z-1 flex min-h-[calc(100vh-5rem)] w-full justify-center 2xl:min-h-[50vh]">
                 <Component {...pageProps} />
             </main>
             <Footer></Footer>
