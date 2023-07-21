@@ -2,8 +2,8 @@ import EstateCard from '../components/estateCard';
 
 export default function Estates() {
     return (
-        <div className="w-screen 2xl:container">
-            <div className="grid h-full grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 2xl:pt-36 2xl:gap-x-16">
+        <div className="w-screen lg:container">
+            <div className="grid h-full grid-cols-1 grid-rows-3 justify-items-center gap-8 p-8 lg:max-2xl:grid-cols-3 lg:max-2xl:grid-rows-1">
                 <EstateCard
                     estateShort="VR"
                     estateName="Viktor Rydbergsgatan 30"

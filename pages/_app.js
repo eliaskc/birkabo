@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps }) {
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
             </Head>
             <Header />
-            <div className="h-20"></div> {/* Dummy spacer for header */}
-            <main className="z-1 flex min-h-[calc(100vh-5rem)] w-full justify-center 2xl:min-h-[50vh]">
+            <div className="h-24 lg:h-20"></div> {/* Dummy spacer for header */}
+            <main className="z-1 flex min-h-[calc(100vh-6rem)] w-full justify-center lg:min-h-[calc(100vh-5rem)]">
                 <Component {...pageProps} />
             </main>
             <Footer></Footer>

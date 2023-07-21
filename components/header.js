@@ -41,12 +41,11 @@ export default function Header() {
         <ul className="flex w-full flex-col items-start lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
                 <Link
-                    className="lg:animated-underline flex flex-col text-xl font-semibold tracking-wide max-lg:w-full lg:text-lg lg:font-medium lg:tracking-normal lg:after:bg-black"
+                    className="lg:animated-underline flex flex-col text-2xl font-semibold tracking-wide max-lg:w-full lg:text-lg lg:font-medium lg:tracking-normal lg:after:bg-black"
                     href={link.href}
                     onClick={() => setOpenNav(false)}
                 >
-                    <span className="max-lg:my-6">{link.label}</span>
-                    <hr className="border-[2px] border-black lg:hidden" />
+                    <span className="max-lg:my-3">{link.label}</span>
                 </Link>
             ))}
         </ul>
@@ -54,13 +53,13 @@ export default function Header() {
 
     return (
         <div
-            className={`fixed z-10 flex w-full flex-col items-center transition-all duration-100 ease-in-out ${
+            className={`fixed z-10 flex w-full flex-col items-center transition-all duration-300 ease-in-out ${
                 scrolledPastHeader || openNav
                     ? 'bg-white/50 shadow-xl backdrop-blur-lg lg:shadow-md lg:backdrop-blur-lg'
                     : ''
             }`}
         >
-            <div className="container flex h-20 items-center justify-between px-8">
+            <div className="container flex h-24 items-center justify-between px-8 lg:h-20">
                 <Link
                     href="/"
                     onClick={() => setOpenNav(false)}

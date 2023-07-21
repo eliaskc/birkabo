@@ -5,15 +5,15 @@ import { FiDownload } from 'react-icons/fi';
 
 export default function Forms() {
     return (
-        <div className="container flex flex-col items-center">
-            <div className="relative h-80 w-screen 2xl:w-[calc(100%-4rem)] 2xl:h-[40rem]">
+        <div className="container flex flex-col items-center px-8 2xl:py-8">
+            <div className="relative h-80 w-screen 2xl:h-[35rem] 2xl:w-full">
                 <Image
                     className="object-cover 2xl:rounded-xl"
                     src={headerImg}
                     fill
                 ></Image>
             </div>
-            <div className="container p-8">
+            <div className="w-full py-8">
                 <p className="mb-4 text-4xl font-semibold">Blanketter</p>
                 <div className="gap-8 lg:grid lg:grid-cols-[1.5fr,1fr]">
                     <div className="flex flex-col gap-4">
