@@ -42,7 +42,7 @@ export default function Contact() {
                             vid eventuellt behov.{' '}
                         </p>
                         <div className="my-4">
-                            <p>
+                            <p className="mt-2">
                                 <span className="font-bold">Telefon: </span>
                                 <Link
                                     className="thin-animated-underline text-link-darker after:bg-link-darker"
@@ -51,7 +51,7 @@ export default function Contact() {
                                     0730&#8209;84&nbsp;92&nbsp;00
                                 </Link>
                             </p>
-                            <p>
+                            <p className="mt-2">
                                 <span className="font-bold">E-post: </span>
                                 <Link
                                     className="thin-animated-underline text-link-darker after:bg-link-darker"
@@ -60,7 +60,7 @@ export default function Contact() {
                                     info@akfast.se
                                 </Link>
                             </p>
-                            <p>
+                            <p className="mt-2">
                                 <span className="font-bold">
                                     Måndag - fredag:
                                 </span>{' '}
@@ -81,7 +81,7 @@ export default function Contact() {
                         på Birkabo direkt via mejl eller telefon enligt nedan.
                     </p>
                     <div className="mt-4">
-                        <p>
+                        <p className="mt-2">
                             <span className="font-bold">Telefon: </span>
                             <Link
                                 className="thin-animated-underline text-link-darker after:bg-link-darker"
@@ -90,7 +90,7 @@ export default function Contact() {
                                 0706&#8209;56&nbsp;67&nbsp;26
                             </Link>
                         </p>
-                        <p>
+                        <p className="mt-2">
                             <span className="font-bold">E-post: </span>
                             <Link
                                 className="thin-animated-underline text-link-darker after:bg-link-darker"
