@@ -46,7 +46,7 @@ export default function Forms() {
                             download="Ansökan av autogiro.pdf"
                         >
                             <div className="button mb-4 flex flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-fit">
-                                Autogiro <FiDownload />
+                                Ansökan om autogiro <FiDownload />
                             </div>
                         </a>
                         <a
@@ -54,7 +54,7 @@ export default function Forms() {
                             download="Mall för andrahandsuthyrning.pdf"
                         >
                             <div className="button mb-4 flex flex-row items-center justify-between gap-4 p-4 text-xl font-semibold lg:w-fit">
-                                Mall för andrahandsuthyrning <FiDownload />
+                                Ansökan om andrahandsuthyrning <FiDownload />
                             </div>
                         </a>
                         <a
