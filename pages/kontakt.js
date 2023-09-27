@@ -36,7 +36,7 @@ export default function Contact() {
                             Fastighetsskötsel
                         </p>
                         <p>
-                            AK Fastighetsskötsel AB anvsvarar för
+                            AK Fastighetsskötsel AB ansvarar för
                             fastighetsskötseln i samtliga fastigheter. Ni
                             kontaktar dem via mejl eller telefon enligt nedan
                             vid eventuellt behov.{' '}
