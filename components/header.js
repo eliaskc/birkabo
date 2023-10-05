@@ -21,6 +21,19 @@ export default function Header() {
             window.removeEventListener('scroll', updateScrolledPastHeader);
     }, []);
 
+    useEffect(() => {
+        if (openNav) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Cleanup function to prevent side effects
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [openNav]);
+
     const links = [
         { href: '/', label: 'Hem' },
         { href: '/fastigheter', label: 'Våra fastigheter' },
