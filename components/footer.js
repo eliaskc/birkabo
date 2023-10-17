@@ -13,8 +13,8 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="flex w-full justify-center bg-cyan-900 pt-4 text-white">
-            <div className="container grid grid-cols-1 gap-y-8 p-8 pb-16 lg:grid-cols-[1.25fr,1.25fr,2fr] lg:px-0">
+        <footer className="flex w-full flex-grow justify-center bg-cyan-900 text-white">
+            <div className="container grid grid-cols-1 gap-y-8 p-8 pb-16 lg:grid-cols-[1.25fr,1.25fr,2fr]">
                 <div className="flex flex-col items-start">
                     <h1 className="mb-4 text-2xl font-bold">Meny</h1>
                     {links.map((link) => (
@@ -49,10 +49,8 @@ export default function Footer() {
                 </div>
 
                 <iframe
-                    className="w-full rounded-lg lg:h-full"
+                    className="aspect-[4/3] w-full rounded-lg"
                     src={mapUrl}
-                    width="300"
-                    height="225"
                     allowFullScreen=""
                     loading="lazy"
                 ></iframe>

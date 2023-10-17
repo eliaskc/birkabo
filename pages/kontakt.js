@@ -5,11 +5,15 @@ import headerImg from './../public/img/headers/kontakt.jpg';
 
 export default function Contact() {
     return (
-        <div className="flex flex-col items-center">
-            <div className="relative h-80 w-screen">
-                <Image className="object-cover" src={headerImg} fill></Image>
+        <div className="container flex flex-col items-center px-8 2xl:py-8">
+            <div className="relative h-80 w-screen 2xl:h-[35rem] 2xl:w-full">
+                <Image
+                    className="object-cover 2xl:rounded-xl"
+                    src={headerImg}
+                    fill
+                ></Image>
             </div>
-            <div className="container grid grid-cols-1 gap-8 p-8 lg:grid-cols-2 lg:px-0">
+            <div className="grid grid-cols-1 gap-8 py-8 lg:grid-cols-2">
                 <div>
                     <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
                         <p className="mb-4 text-4xl font-semibold">
@@ -32,13 +36,13 @@ export default function Contact() {
                             Fastighetsskötsel
                         </p>
                         <p>
-                            AK Fastighetsskötsel AB anvsvarar för
+                            AK Fastighetsskötsel AB ansvarar för
                             fastighetsskötseln i samtliga fastigheter. Ni
                             kontaktar dem via mejl eller telefon enligt nedan
                             vid eventuellt behov.{' '}
                         </p>
                         <div className="my-4">
-                            <p>
+                            <p className="mt-2">
                                 <span className="font-bold">Telefon: </span>
                                 <Link
                                     className="thin-animated-underline text-link-darker after:bg-link-darker"
@@ -47,7 +51,7 @@ export default function Contact() {
                                     0730&#8209;84&nbsp;92&nbsp;00
                                 </Link>
                             </p>
-                            <p>
+                            <p className="mt-2">
                                 <span className="font-bold">E-post: </span>
                                 <Link
                                     className="thin-animated-underline text-link-darker after:bg-link-darker"
@@ -56,7 +60,7 @@ export default function Contact() {
                                     info@akfast.se
                                 </Link>
                             </p>
-                            <p>
+                            <p className="mt-2">
                                 <span className="font-bold">
                                     Måndag - fredag:
                                 </span>{' '}
@@ -77,7 +81,7 @@ export default function Contact() {
                         på Birkabo direkt via mejl eller telefon enligt nedan.
                     </p>
                     <div className="mt-4">
-                        <p>
+                        <p className="mt-2">
                             <span className="font-bold">Telefon: </span>
                             <Link
                                 className="thin-animated-underline text-link-darker after:bg-link-darker"
@@ -86,7 +90,7 @@ export default function Contact() {
                                 0706&#8209;56&nbsp;67&nbsp;26
                             </Link>
                         </p>
-                        <p>
+                        <p className="mt-2">
                             <span className="font-bold">E-post: </span>
                             <Link
                                 className="thin-animated-underline text-link-darker after:bg-link-darker"

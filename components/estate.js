@@ -23,24 +23,23 @@ export default function Estate(props) {
     }
 
     return (
-        <div className="container mb-16 lg:m-16 lg:mt-8 lg:grid lg:grid-cols-[2fr,1.25fr] lg:gap-x-16">
-            <div className="lg:col-start-1">
-                <div className="my-4 ml-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
-                    <Link
-                        href="/fastigheter"
-                        className="animated-underline text-black after:bg-black"
-                    >
-                        Våra fastigheter
-                    </Link>
-                    /
-                    <Link
-                        href={`/fastigheter/${props.estateShort}`}
-                        className="cursor-default text-gray-500"
-                    >
-                        {props.estateName}
-                    </Link>
-                </div>
-
+        <div className="container mb-16 px-8 lg:mt-8">
+            <div className="my-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
+                <Link
+                    href="/fastigheter"
+                    className="animated-underline text-black after:bg-black"
+                >
+                    Våra fastigheter
+                </Link>
+                /
+                <Link
+                    href={`/fastigheter/${props.estateShort}`}
+                    className="cursor-default text-gray-500"
+                >
+                    {props.estateName}
+                </Link>
+            </div>
+            <div className="lg:flex lg:gap-8">
                 <Swiper
                     slidesPerView={'auto'}
                     centeredSlides
@@ -69,7 +68,7 @@ export default function Estate(props) {
                         '--swiper-pagination-bullet-inactive-opacity': '.6',
                     }}
                     modules={[Keyboard, Pagination, Navigation]}
-                    className="m-0 h-[67vw] w-full md:rounded-xl lg:h-[32rem]"
+                    className="m-0 h-[67vw] overflow-hidden max-sm:-mx-8 max-sm:w-screen sm:rounded-xl lg:aspect-[3/2] lg:h-[32rem]"
                 >
                     {gallery.map((image, index) => (
                         <SwiperSlide
@@ -92,19 +91,21 @@ export default function Estate(props) {
                     <FaChevronCircleLeft className="swiper-button-prev hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
                     <FaChevronCircleRight className="swiper-button-next hidden h-10 w-10 rounded-full border-2 border-white bg-white text-birkabo duration-300 hover:scale-110 lg:block" />
                 </Swiper>
+
+                <div className="py-8 lg:p-0">
+                    <h1 className="text-4xl font-semibold">
+                        {props.estateName}
+                    </h1>
+                    <div className="py-8">{props.estateDescription}</div>
+                </div>
             </div>
 
-            <div className="p-8 lg:p-0">
-                <h1 className="text-4xl font-semibold">{props.estateName}</h1>
-                <div className="py-8">{props.estateDescription}</div>
-
-                <iframe
-                    className="h-[300px] w-full rounded-xl lg:h-[400px]"
-                    src={props.mapUrl}
-                    allowFullScreen=""
-                    loading="lazy"
-                ></iframe>
-            </div>
+            <iframe
+                className="h-[20rem] w-full rounded-xl lg:h-[30rem] lg:pt-16"
+                src={props.mapUrl}
+                allowFullScreen=""
+                loading="lazy"
+            ></iframe>
         </div>
     );
 }
