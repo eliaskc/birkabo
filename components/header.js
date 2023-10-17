@@ -43,17 +43,11 @@ export default function Header() {
         { href: '/om', label: 'Om Birkabo' },
     ];
 
-    useEffect(() => {
-        window.addEventListener(
-            'resize',
-            () => window.innerWidth >= 960 && setOpenNav(false)
-        );
-    }, []);
-
     const navList = (
         <ul className="flex w-full flex-col items-start lg:flex-row lg:gap-6 lg:p-0">
             {links.map((link) => (
                 <Link
+                    key={link.href}
                     className="lg:animated-underline flex flex-col text-2xl font-semibold tracking-wide max-lg:w-full lg:text-lg lg:font-medium lg:tracking-normal lg:after:bg-black"
                     href={link.href}
                     onClick={() => setOpenNav(false)}
