@@ -69,11 +69,16 @@ export default function Header() {
             <div className="container flex h-24 items-center justify-between px-8 lg:h-20">
                 <Link
                     href="/"
-                    alt="Hem"
+                    aria-label="Gå till startsidan"
                     onClick={() => setOpenNav(false)}
                     className="relative h-full w-52"
                 >
-                    <Image src={logo} fill className="object-contain" />
+                    <Image
+                        src={logo}
+                        fill
+                        className="object-contain"
+                        alt="Birkabos logotyp"
+                    />
                 </Link>
                 <div className="max-lg:hidden">{navList}</div>
                 {openNav ? (
