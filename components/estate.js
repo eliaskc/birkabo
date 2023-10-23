@@ -70,9 +70,9 @@ export default function Estate(props) {
                     modules={[Keyboard, Pagination, Navigation]}
                     className="m-0 h-[67vw] overflow-hidden max-sm:-mx-8 max-sm:w-screen sm:rounded-xl lg:aspect-[3/2] lg:h-[32rem]"
                 >
-                    {gallery.map((image, index) => (
+                    {gallery.map((image) => (
                         <SwiperSlide
-                            key={index}
+                            key={image}
                             className={
                                 image.height > image.width
                                     ? 'w-1/2 lg:h-full'
@@ -83,7 +83,7 @@ export default function Estate(props) {
                                 fill={true}
                                 className="object-cover lg:rounded-xl"
                                 src={image}
-                                alt=""
+                                alt={'Bild på ' + props.estateName}
                             />
                         </SwiperSlide>
                     ))}
@@ -101,6 +101,7 @@ export default function Estate(props) {
             </div>
 
             <iframe
+                title={'Karta som visar plats för ' + props.estateName}
                 className="h-[20rem] w-full rounded-xl lg:h-[30rem] lg:pt-16"
                 src={props.mapUrl}
                 allowFullScreen=""

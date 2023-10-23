@@ -53,6 +53,7 @@ export default function Footer() {
                     src={mapUrl}
                     allowFullScreen=""
                     loading="lazy"
+                    title="Karta som visar plats för Birkabos kontor"
                 ></iframe>
             </div>
         </footer>

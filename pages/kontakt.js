@@ -10,15 +10,16 @@ export default function Contact() {
                 <Image
                     className="object-cover 2xl:rounded-xl"
                     src={headerImg}
+                    alt="Bild på Birkagatan 55"
                     fill
                 ></Image>
             </div>
             <div className="grid grid-cols-1 gap-8 py-8 lg:grid-cols-2">
                 <div>
                     <div className="mb-8 rounded-lg bg-red-600 p-4 text-white">
-                        <p className="mb-4 text-4xl font-semibold">
+                        <h2 className="mb-4 text-4xl font-semibold">
                             Journummer
-                        </p>
+                        </h2>
                         <p>
                             Vid akut vattenläcka när AK Fastighetsskötsel (se
                             nedan) ej kan nås, ring Göteborgs El & Rörjour på:{' '}
@@ -32,9 +33,9 @@ export default function Contact() {
                     </div>
 
                     <div>
-                        <p className="mb-4 text-4xl font-semibold">
+                        <h2 className="mb-4 text-4xl font-semibold">
                             Fastighetsskötsel
-                        </p>
+                        </h2>
                         <p>
                             AK Fastighetsskötsel AB ansvarar för
                             fastighetsskötseln i samtliga fastigheter. Ni
@@ -75,7 +76,7 @@ export default function Contact() {
                     </div>
                 </div>
                 <div>
-                    <p className="mb-4 text-4xl font-semibold">Birkabo</p>
+                    <h2 className="mb-4 text-4xl font-semibold">Birkabo</h2>
                     <p>
                         För övriga frågor eller funderingar kan ni kontakta oss
                         på Birkabo direkt via mejl eller telefon enligt nedan.
@@ -101,9 +102,9 @@ export default function Contact() {
                         </p>
                     </div>
 
-                    <p className="mb-4 mt-8 text-2xl font-semibold">
+                    <h3 className="mb-4 mt-8 text-2xl font-semibold">
                         Fakturerings- och besöksadress
-                    </p>
+                    </h3>
                     <p>
                         Birkabo Förvaltning <br /> Birkagatan 55A <br /> 416 56
                         Göteborg

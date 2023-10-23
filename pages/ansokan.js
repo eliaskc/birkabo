@@ -8,11 +8,12 @@ export default function Application() {
                 <Image
                     className="object-cover 2xl:rounded-xl"
                     src={headerImg}
+                    alt="Bild på Birkagatan 55"
                     fill
                 ></Image>
             </div>
             <div className="self-start py-8">
-                <p className="mb-4 text-4xl font-semibold">Ansökan</p>
+                <h2 className="mb-4 text-4xl font-semibold">Ansökan</h2>
                 <p className="mb-4">
                     Om ni är intresserade av att bo hos oss ber vi er skicka en
                     intresseanmälan till{' '}

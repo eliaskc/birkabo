@@ -10,11 +10,12 @@ export default function Forms() {
                 <Image
                     className="object-cover 2xl:rounded-xl"
                     src={headerImg}
+                    alt="Bild på Birkagatan 55"
                     fill
                 ></Image>
             </div>
             <div className="w-full py-8">
-                <p className="mb-4 text-4xl font-semibold">Blanketter</p>
+                <h3 className="mb-4 text-4xl font-semibold">Blanketter</h3>
                 <div className="gap-8 lg:grid lg:grid-cols-[1.5fr,1fr]">
                     <div className="flex flex-col gap-4">
                         <p>

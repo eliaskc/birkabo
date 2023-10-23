@@ -13,6 +13,7 @@ export default function EstateCard(props) {
     return (
         <Link
             href={'fastigheter/' + props.estateShort}
+            alt={'Länk till ' + props.estateName}
             className={
                 bgImg +
                 ' group flex h-full w-full items-center justify-center rounded-3xl bg-black/50 bg-cover p-8 bg-blend-darken duration-500 lg:cursor-pointer lg:drop-shadow-2xl lg:hover:bg-black/20 2xl:w-3/6'
