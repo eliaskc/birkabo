@@ -22,7 +22,7 @@ export default function Hem() {
             </div>
 
             <div className="place-self-start self-center lg:col-span-2 lg:col-start-1 lg:row-start-1">
-                <h1 className="m-0 text-4xl font-light">Välkommen till</h1>
+                <h2 className="m-0 text-4xl font-light">Välkommen till</h2>
                 <h1 className="m-0 text-5xl font-bold">Birkabo Förvaltning</h1>
             </div>
 

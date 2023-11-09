@@ -10,6 +10,22 @@ const inter = Inter({
     variable: '--font-inter',
 });
 
+const productJsonLd = {
+    __html: `{
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Birkabo Förvaltning",
+        "image": "https://birkabo.se/_next/static/media/birkabo_logo_no_bg.1bdbf164.png",
+        "telephone": "0706 - 56 67 26",
+        "email": "info@birkabo.se",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Birkagatan 55A",
+            "addressLocality": "Göteborg",
+            "postalCode": "416 56"
+        }
+    }`,
+};
 function MyApp({ Component, pageProps }) {
     return (
         <div
@@ -17,9 +33,14 @@ function MyApp({ Component, pageProps }) {
         >
             <Head>
                 <title>Birkabo Förvaltning</title>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={productJsonLd}
+                    key="product-jsonld"
+                />
                 <meta
                     name="description"
-                    content="Hemsida för Birkabo Förvaltning"
+                    content="Birkabo Förvaltning är ett familjedrivet fastighetsbolag som förvaltar hyresrätter i Göteborg."
                 />
                 <meta name="viewport" content="width=device-width" />
                 <link

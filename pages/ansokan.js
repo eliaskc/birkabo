@@ -1,9 +1,13 @@
 import Image from 'next/image';
+import Head from 'next/head';
 import headerImg from './../public/img/headers/info.jpg';
 
 export default function Application() {
     return (
         <div className="container flex flex-col items-center px-8 2xl:py-8">
+            <Head>
+                <title>Ansökan</title>
+            </Head>
             <div className="relative h-80 w-screen 2xl:h-[35rem] 2xl:w-full">
                 <Image
                     className="object-cover 2xl:rounded-xl"

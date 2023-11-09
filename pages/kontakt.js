@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 import headerImg from './../public/img/headers/kontakt.jpg';
 
 export default function Contact() {
     return (
         <div className="container flex flex-col items-center px-8 2xl:py-8">
+            <Head>
+                <title>Kontakta oss</title>
+            </Head>
             <div className="relative h-80 w-screen 2xl:h-[35rem] 2xl:w-full">
                 <Image
                     className="object-cover 2xl:rounded-xl"
@@ -21,8 +25,8 @@ export default function Contact() {
                             Journummer
                         </h2>
                         <p>
-                            Vid akut vattenläcka när AK Fastighetsskötsel (se
-                            nedan) ej kan nås, ring Göteborgs El & Rörjour på:{' '}
+                            Vid akut vattenläcka (när AK Fastighetsskötsel ej
+                            kan nås) ring Göteborgs El & Rörjour på:{' '}
                             <Link
                                 className="animated-underline text-xl font-bold text-link"
                                 href="tel:031500120"
@@ -40,7 +44,7 @@ export default function Contact() {
                             AK Fastighetsskötsel AB ansvarar för
                             fastighetsskötseln i samtliga fastigheter. Ni
                             kontaktar dem via mejl eller telefon enligt nedan
-                            vid eventuellt behov.{' '}
+                            vid eventuellt behov.
                         </p>
                         <div className="my-4">
                             <p className="mt-2">

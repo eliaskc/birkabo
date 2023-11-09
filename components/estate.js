@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Navigation, Pagination } from 'swiper';
 import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
@@ -24,6 +25,9 @@ export default function Estate(props) {
 
     return (
         <div className="container mb-16 px-8 lg:mt-8">
+            <Head>
+                <title>{props.estateName}</title>
+            </Head>
             <div className="my-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
                 <Link
                     href="/fastigheter"

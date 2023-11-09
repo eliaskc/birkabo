@@ -1,9 +1,13 @@
 import Image from 'next/image';
+import Head from 'next/head';
 import headerImg from './../public/img/headers/historia.jpg';
 
 export default function About() {
     return (
         <div className="container flex flex-col gap-8 p-8 pb-16 max-lg:items-center lg:flex-row">
+            <Head>
+                <title>Om Birkabo</title>
+            </Head>
             <div className="w-screen lg:left-8 lg:w-4/6">
                 <Image
                     src={headerImg}
@@ -19,8 +23,8 @@ export default function About() {
                         1995 av Bertil Kjellberg.{' '}
                     </p>
                     <p className="mt-2">
-                        Sedan 2017 tillbaka drivs bolaget av Johannes Kjellberg
-                        Carlson & Peter Carlson.
+                        Sedan 2017 drivs bolaget av Johannes Kjellberg Carlson &
+                        Peter Carlson.
                     </p>
                 </div>
             </div>
