@@ -17,7 +17,7 @@ export default function Hem() {
                 <Image
                     className="object-cover lg:rounded-2xl"
                     src={welcomeImg}
-                    alt="Bild av uteplats på Birkagatan 55"
+                    alt="Uteplats på Birkagatan 55"
                 ></Image>
             </div>
 
