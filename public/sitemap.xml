@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Index page -->
+  <url>
+    <loc>https://www.birkabo.se/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Fastigheter page -->
+  <url>
+    <loc>https://www.birkabo.se/fastigheter</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Ansökan page -->
+  <url>
+    <loc>https://www.birkabo.se/ansokan</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blanketter page -->
+  <url>
+    <loc>https://www.birkabo.se/blanketter</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Kontakt page -->
+  <url>
+    <loc>https://www.birkabo.se/kontakt</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Om page (assuming it is also linked in the header) -->
+  <url>
+    <loc>https://www.birkabo.se/om</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
