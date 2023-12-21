@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
                 />
                 <meta
                     name="description"
-                    content="Birkabo Förvaltning är ett familjedrivet fastighetsbolag som förvaltar hyresrätter i Göteborg."
+                    content="Birkabo Förvaltning är ett familjedrivet fastighetsbolag som förvaltar hyresrätter i Göteborg. Här kan ni hitta information om våra fastigheter, hur ni ansöker och hur ni kan kontakta oss."
                 />
                 <meta name="viewport" content="width=device-width" />
                 <link
