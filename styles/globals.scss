@@ -10,6 +10,6 @@
         @apply relative after:absolute after:-bottom-0.5 after:left-0 after:block after:h-0.5 after:w-full after:transform after:bg-link after:transition-transform after:duration-300 after:ease-in-out lg:after:scale-x-0 lg:hover:after:scale-x-100;
     }
     .button {
-        @apply rounded-2xl bg-white shadow-md duration-300 lg:shadow-md lg:hover:-translate-x-0.5 lg:hover:-translate-y-0.5 lg:hover:shadow-lg lg:active:translate-x-0 lg:active:translate-y-0;
+        @apply rounded-2xl bg-white shadow-md shadow-neutral-300 duration-300 lg:hover:-translate-x-0.5 lg:hover:-translate-y-0.5 lg:hover:shadow-lg lg:active:translate-x-0 lg:active:translate-y-0;
     }
 }

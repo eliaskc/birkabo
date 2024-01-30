@@ -1,13 +1,13 @@
-import '../styles/globals.scss';
-import Head from 'next/head';
-import { Inter } from 'next/font/google';
+import "../styles/globals.scss";
+import Head from "next/head";
+import { Inter } from "next/font/google";
 
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Footer from "../components/footer";
+import Header from "../components/header";
 
 const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
+    subsets: ["latin"],
+    variable: "--font-inter",
 });
 
 const productJsonLd = {
@@ -32,6 +32,20 @@ function MyApp({ Component, pageProps }) {
             className={`${inter.variable} flex min-h-screen flex-col bg-gradient-to-br from-birkabo via-birkabo/[.15] font-body`}
         >
             <Head>
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-6031EFRJNB"
+                ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-6031EFRJNB');
+            `,
+                    }}
+                />
                 <title>Birkabo Förvaltning</title>
                 <script
                     type="application/ld+json"
