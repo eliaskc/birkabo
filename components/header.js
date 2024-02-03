@@ -36,11 +36,11 @@ export default function Header() {
 
     const links = [
         { href: '/', label: 'Hem' },
-        { href: '/fastigheter', label: 'Våra fastigheter' },
-        { href: '/ansokan', label: 'Ansökan' },
-        { href: '/blanketter', label: 'Blanketter' },
-        { href: '/kontakt', label: 'Kontakta oss' },
-        { href: '/om', label: 'Om Birkabo' },
+        { href: '/fastigheter.html', label: 'Våra fastigheter' },
+        { href: '/ansokan.html', label: 'Ansökan' },
+        { href: '/blanketter.html', label: 'Blanketter' },
+        { href: '/kontakt.html', label: 'Kontakta oss' },
+        { href: '/om.html', label: 'Om Birkabo' },
     ];
 
     const navList = (

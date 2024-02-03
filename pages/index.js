@@ -5,10 +5,10 @@ import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg';
 
 export default function Hem() {
     const links = [
-        { href: '/fastigheter', label: 'Våra fastigheter' },
-        { href: '/ansokan', label: 'Ansökan' },
-        { href: '/blanketter', label: 'Blanketter' },
-        { href: '/kontakt', label: 'Kontakta oss' },
+        { href: '/fastigheter.html', label: 'Våra fastigheter' },
+        { href: '/ansokan.html', label: 'Ansökan' },
+        { href: '/blanketter.html', label: 'Blanketter' },
+        { href: '/kontakt.html', label: 'Kontakta oss' },
     ];
 
     return (
