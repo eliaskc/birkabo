@@ -30,7 +30,7 @@ export default function Estate(props) {
             </Head>
             <div className="my-4 flex gap-x-2 font-semibold lg:m-0 lg:mb-4 lg:text-lg">
                 <Link
-                    href="/fastigheter"
+                    href="/fastigheter.html"
                     className="animated-underline text-black after:bg-black"
                 >
                     Våra fastigheter
