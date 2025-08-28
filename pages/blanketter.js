@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import headerImg from "./../public/img/headers/info.jpg";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 export default function Forms() {
@@ -55,42 +56,48 @@ export default function Forms() {
                             </div>
                         </a>
                         <a
-                            href="/blanketter/andrahand_mall.pdf"
-                            download="Mall för andrahandsuthyrning.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            href="https://app.fastdok.se/external/contract-create/185"
                             className="w-full"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Ansökan om andrahandsuthyrning <FiDownload />
+                                Ansökan om andrahandsuthyrning{" "}
+                                <FaExternalLinkAlt />
                             </div>
                         </a>
                         <a
-                            href="/blanketter/andrahand_avtal.pdf"
-                            download="Avtal för andrahandsuthyrning.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            href="https://app.fastdok.se/external/contract-create/174"
                             className="w-full"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Avtal för andrahandsuthyrning <FiDownload />
+                                Avtal för andrahandsuthyrning{" "}
+                                <FaExternalLinkAlt />
                             </div>
                         </a>
                     </div>
 
                     <div>
                         <a
-                            href="/blanketter/valkommen_som_hyresgast.pdf"
-                            download="Välkommen som hyresgäst.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            href="https://www.fastighetsagarna.se/fakta/broschyrer-och-faktablad/Boendeinformation/valkommen-som-hyresgast/"
                             className="w-full"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Välkommen som hyresgäst <FiDownload />
+                                Välkommen som hyresgäst <FaExternalLinkAlt />
                             </div>
                         </a>
                         <a
-                            href="/blanketter/tips_infor_flytten.pdf"
-                            download="Tips inför flytten.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            href="https://www.fastighetsagarna.se/fakta/broschyrer-och-faktablad/Boendeinformation/tips-infor-flytten/"
                             className="w-full"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Tips inför flytten <FiDownload />
+                                Tips inför flytten <FaExternalLinkAlt />
                             </div>
                         </a>
                     </div>
