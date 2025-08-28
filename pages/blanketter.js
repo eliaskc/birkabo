@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import headerImg from "./../public/img/headers/info.jpg";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
+import { FiDownload, FiExternalLink } from "react-icons/fi";
 
 export default function Forms() {
     return (
@@ -52,7 +51,8 @@ export default function Forms() {
                             download="Ansökan av autogiro.pdf"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Ansökan om autogiro <FiDownload />
+                                Ansökan om autogiro{" "}
+                                <FiDownload className="h-5 w-5 flex-shrink-0" />
                             </div>
                         </a>
                         <a
@@ -63,7 +63,7 @@ export default function Forms() {
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
                                 Ansökan om andrahandsuthyrning{" "}
-                                <FaExternalLinkAlt />
+                                <FiExternalLink className="h-5 w-5 flex-shrink-0" />
                             </div>
                         </a>
                         <a
@@ -74,7 +74,7 @@ export default function Forms() {
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
                                 Avtal för andrahandsuthyrning{" "}
-                                <FaExternalLinkAlt />
+                                <FiExternalLink className="h-5 w-5 flex-shrink-0" />
                             </div>
                         </a>
                     </div>
@@ -87,7 +87,8 @@ export default function Forms() {
                             className="w-full"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Välkommen som hyresgäst <FaExternalLinkAlt />
+                                Välkommen som hyresgäst{" "}
+                                <FiExternalLink className="h-5 w-5 flex-shrink-0" />
                             </div>
                         </a>
                         <a
@@ -97,7 +98,8 @@ export default function Forms() {
                             className="w-full"
                         >
                             <div className="button mb-4 flex h-20 flex-row items-center justify-between gap-4 p-4 text-xl font-semibold ">
-                                Tips inför flytten <FaExternalLinkAlt />
+                                Tips inför flytten{" "}
+                                <FiExternalLink className="h-5 w-5 flex-shrink-0" />
                             </div>
                         </a>
                     </div>
