@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import welcomeImg from '../public/img/Birkagatan/20190521-IMG_9013.jpg';
+import welcomeImg from "../public/img/Birkagatan/20190521-IMG_9013.jpg";
 
 export default function Hem() {
     const links = [
-        { href: '/fastigheter.html', label: 'Våra fastigheter' },
-        { href: '/ansokan.html', label: 'Ansökan' },
-        { href: '/blanketter.html', label: 'Blanketter' },
-        { href: '/kontakt.html', label: 'Kontakta oss' },
+        { href: "/fastigheter.html", label: "Våra fastigheter" },
+        { href: "/ansokan.html", label: "Ansökan" },
+        { href: "/blanketter.html", label: "Blanketter" },
+        { href: "/kontakt.html", label: "Kontakta oss" },
     ];
 
     return (

@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Head from 'next/head';
-import headerImg from './../public/img/headers/info.jpg';
+import Image from "next/image";
+import Head from "next/head";
+import headerImg from "./../public/img/headers/info.jpg";
 
 export default function Application() {
     return (
@@ -20,7 +20,7 @@ export default function Application() {
                 <h2 className="mb-4 text-4xl font-semibold">Ansökan</h2>
                 <p className="mb-4">
                     Om ni är intresserade av att bo hos oss ber vi er skicka en
-                    intresseanmälan till{' '}
+                    intresseanmälan till{" "}
                     <a
                         className="thin-animated-underline text-link-darker after:bg-link-darker"
                         href="mailto:info@birkabo.se"

@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Head from 'next/head';
+import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
 
-import headerImg from './../public/img/headers/kontakt.jpg';
+import headerImg from "./../public/img/headers/kontakt.jpg";
 
 export default function Contact() {
     return (
@@ -26,7 +26,7 @@ export default function Contact() {
                         </h2>
                         <p>
                             Vid akut vattenläcka (när AK Fastighetsskötsel ej
-                            kan nås) ring Göteborgs El & Rörjour på:{' '}
+                            kan nås) ring Göteborgs El & Rörjour på:{" "}
                             <Link
                                 className="animated-underline text-xl font-bold text-link"
                                 href="tel:031500120"
@@ -68,14 +68,14 @@ export default function Contact() {
                             <p className="mt-2">
                                 <span className="font-bold">
                                     Måndag - fredag:
-                                </span>{' '}
+                                </span>{" "}
                                 07.00 - 11.00
                             </p>
                         </div>
                         <p>
                             Vänligen inkludera information om vilken fastighet
                             och lägenhet det gäller, vad felet är samt
-                            telefonnummer ni kan kontaktas på.{' '}
+                            telefonnummer ni kan kontaktas på.{" "}
                         </p>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                             <span className="font-bold">Telefon: </span>
                             <Link
                                 className="thin-animated-underline text-link-darker after:bg-link-darker"
-                                href={'tel:0706566726'}
+                                href={"tel:0706566726"}
                             >
                                 0706&#8209;56&nbsp;67&nbsp;26
                             </Link>

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import EstateCard from '../components/estateCard';
+import Head from "next/head";
+import EstateCard from "../components/estateCard";
 
 export default function Estates() {
     return (

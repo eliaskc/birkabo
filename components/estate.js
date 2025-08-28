@@ -1,25 +1,25 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Head from 'next/head';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard, Navigation, Pagination } from 'swiper';
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
-import { galleryVR } from '../public/img/VR_gallery/indexVR';
-import { galleryB51 } from '../public/img/B51_gallery/indexB51';
-import { galleryB55 } from '../public/img/B55_gallery/indexB55';
+import Link from "next/link";
+import Image from "next/image";
+import Head from "next/head";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard, Navigation, Pagination } from "swiper";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import { galleryVR } from "../public/img/VR_gallery/indexVR";
+import { galleryB51 } from "../public/img/B51_gallery/indexB51";
+import { galleryB55 } from "../public/img/B55_gallery/indexB55";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function Estate(props) {
     var gallery;
 
-    if (props.estateShort === 'VR') {
+    if (props.estateShort === "VR") {
         gallery = galleryVR;
-    } else if (props.estateShort === 'B51') {
+    } else if (props.estateShort === "B51") {
         gallery = galleryB51;
-    } else if (props.estateShort === 'B55') {
+    } else if (props.estateShort === "B55") {
         gallery = galleryB55;
     }
 
@@ -45,7 +45,7 @@ export default function Estate(props) {
             </div>
             <div className="lg:flex lg:gap-8">
                 <Swiper
-                    slidesPerView={'auto'}
+                    slidesPerView={"auto"}
                     centeredSlides
                     spaceBetween={20}
                     loop
@@ -60,16 +60,16 @@ export default function Estate(props) {
                                 '<span class="bg-birkabo rounded-lg w-6 h-6 hover:opacity-75 duration-300 ' +
                                 className +
                                 '">' +
-                                '</span>'
+                                "</span>"
                             );
                         },
                     }}
                     navigation={{
-                        prevEl: '.swiper-button-prev',
-                        nextEl: '.swiper-button-next',
+                        prevEl: ".swiper-button-prev",
+                        nextEl: ".swiper-button-next",
                     }}
                     style={{
-                        '--swiper-pagination-bullet-inactive-opacity': '.6',
+                        "--swiper-pagination-bullet-inactive-opacity": ".6",
                     }}
                     modules={[Keyboard, Pagination, Navigation]}
                     className="m-0 h-[67vw] overflow-hidden max-sm:-mx-8 max-sm:w-screen sm:rounded-xl lg:aspect-[3/2] lg:h-[32rem]"
@@ -79,15 +79,15 @@ export default function Estate(props) {
                             key={image}
                             className={
                                 image.height > image.width
-                                    ? 'w-1/2 lg:h-full'
-                                    : ''
+                                    ? "w-1/2 lg:h-full"
+                                    : ""
                             }
                         >
                             <Image
                                 fill={true}
                                 className="object-cover lg:rounded-xl"
                                 src={image}
-                                alt={'Bild på ' + props.estateName}
+                                alt={"Bild på " + props.estateName}
                             />
                         </SwiperSlide>
                     ))}
@@ -105,7 +105,7 @@ export default function Estate(props) {
             </div>
 
             <iframe
-                title={'Karta som visar plats för ' + props.estateName}
+                title={"Karta som visar plats för " + props.estateName}
                 className="h-[20rem] w-full rounded-xl lg:h-[30rem] lg:pt-16"
                 src={props.mapUrl}
                 allowFullScreen=""

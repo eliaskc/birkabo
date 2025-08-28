@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../public/birkabo_logo_no_bg.png';
-import { IoClose, IoMenu } from 'react-icons/io5';
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "../public/birkabo_logo_no_bg.png";
+import { IoClose, IoMenu } from "react-icons/io5";
 
 export default function Header() {
     const [openNav, setOpenNav] = useState(false);
@@ -15,32 +15,32 @@ export default function Header() {
 
         updateScrolledPastHeader();
 
-        window.addEventListener('scroll', updateScrolledPastHeader);
+        window.addEventListener("scroll", updateScrolledPastHeader);
 
         return () =>
-            window.removeEventListener('scroll', updateScrolledPastHeader);
+            window.removeEventListener("scroll", updateScrolledPastHeader);
     }, []);
 
     useEffect(() => {
         if (openNav) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = "hidden";
         } else {
-            document.body.style.overflow = '';
+            document.body.style.overflow = "";
         }
 
         // Cleanup function to prevent side effects
         return () => {
-            document.body.style.overflow = '';
+            document.body.style.overflow = "";
         };
     }, [openNav]);
 
     const links = [
-        { href: '/', label: 'Hem' },
-        { href: '/fastigheter.html', label: 'Våra fastigheter' },
-        { href: '/ansokan.html', label: 'Ansökan' },
-        { href: '/blanketter.html', label: 'Blanketter' },
-        { href: '/kontakt.html', label: 'Kontakta oss' },
-        { href: '/om.html', label: 'Om Birkabo' },
+        { href: "/", label: "Hem" },
+        { href: "/fastigheter.html", label: "Våra fastigheter" },
+        { href: "/ansokan.html", label: "Ansökan" },
+        { href: "/blanketter.html", label: "Blanketter" },
+        { href: "/kontakt.html", label: "Kontakta oss" },
+        { href: "/om.html", label: "Om Birkabo" },
     ];
 
     const navList = (
@@ -62,8 +62,8 @@ export default function Header() {
         <div
             className={`fixed z-10 flex w-full flex-col items-center transition-all duration-300 ease-in-out ${
                 scrolledPastHeader || openNav
-                    ? 'bg-white/50 shadow-xl backdrop-blur-lg lg:shadow-md lg:backdrop-blur-lg'
-                    : ''
+                    ? "bg-white/50 shadow-xl backdrop-blur-lg lg:shadow-md lg:backdrop-blur-lg"
+                    : ""
             }`}
         >
             <div className="container flex h-24 items-center justify-between px-8 lg:h-20">
@@ -95,7 +95,7 @@ export default function Header() {
             </div>
             <div
                 className={`flex h-[calc(100vh-5rem)] w-full p-8 ${
-                    !openNav ? 'hidden' : ''
+                    !openNav ? "hidden" : ""
                 }`}
             >
                 {navList}

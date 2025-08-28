@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Head from 'next/head';
-import headerImg from './../public/img/headers/historia.jpg';
+import Image from "next/image";
+import Head from "next/head";
+import headerImg from "./../public/img/headers/historia.jpg";
 
 export default function About() {
     return (
@@ -20,7 +20,7 @@ export default function About() {
                     <h2 className="mb-4 text-4xl font-semibold">Om Birkabo</h2>
                     <p>
                         Birkabo Förvaltning är ett familjeföretag som grundades
-                        1995 av Bertil Kjellberg.{' '}
+                        1995 av Bertil Kjellberg.{" "}
                     </p>
                     <p className="mt-2">
                         Sedan 2017 drivs bolaget av Johannes Kjellberg Carlson &
